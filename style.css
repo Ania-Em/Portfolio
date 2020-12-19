@@ -14,6 +14,7 @@
    --color-secondary-transparent: hsla(160,34%,70%,0.5);
    --color-secondary: #518F7A;
    --color-tertiary: #C4C4C4;
+   --margin-tiles: 200px;
 }
 
 body {
@@ -23,7 +24,10 @@ body {
     background-size: 35px 35px;
  }
 
-a, a:visited{text-decoration: none;}
+a, a:visited{
+   text-decoration: none;
+   color: var(--color-main);
+}
 
 ul{list-style-type: none}
 
@@ -33,7 +37,7 @@ h2{font:700 35px'Quicksand', sans-serif;}
 
 h3{
    font:700 28px'Quicksand', sans-serif;
-   line-height: 0.97rem;
+   line-height: 0.95em;
 }
 
 h4{font:700 22px'Quicksand', sans-serif;}
@@ -126,6 +130,7 @@ section.landing .welcome-container{
    flex-direction: column;
    justify-content: center;
    align-items: flex-end;
+   margin-top:30px;
 }
 
 section.landing .welcome-box{
@@ -151,24 +156,24 @@ section.landing .welcome-container p.signature{
    font:400 30px 'Caveat', cursive;
 }
 
-section.landing .email span{
-   font:400 24px 'Caveat', cursive;
-}
+/* Banner */
 
-/* Titles */
-
-.titles{
+.banner{
    width:100%;
    display:flex;
    justify-content: center;
    align-items: center;
 }
 
-.titles h1{
+.banner h1{
    padding: 0 70px; 
 }
 
-.titles .line{
+.banner h2{
+   padding: 0 70px; 
+}
+
+.banner-line{
    height:1px;
    flex-grow:10;
    background-color:var(--color-main);
@@ -184,7 +189,7 @@ section.projects{
 
 .project-container{
    display:flex;
-   margin-top:200px;
+   margin-top:var(--margin-tiles);
 }
 
 .project img{
@@ -209,7 +214,7 @@ section.projects{
 }
 
 .project-container .description-container .underline{
-   margin: 25px 0px;
+   margin: 25px 0px 40px;
    height: 1px;
    background-color: var(--color-main);
    width: 100%;
@@ -219,4 +224,60 @@ section.projects{
    font:500 18px'Quicksand', sans-serif;
 }
 
+/* Others */
 
+.banner-others{
+   margin-top:var(--margin-tiles);
+}
+
+/* Footer */
+
+footer{
+   display:flex;
+   justify-content:space-between;
+   margin-top: var(--margin-tiles);
+   height:200px;
+   background-color: var(--background-color);
+   border-top: 10px solid var(--color-secondary-transparent);
+   outline: solid 1px var(--color-main);
+   outline-offset: 15px;
+}
+
+.footer-container{
+   display:flex;
+   flex-direction:column;
+   padding-top:15px;
+   padding-left:2vw;
+}
+
+footer .footer-tile{
+   padding: 10px;
+}
+
+footer .footer-tile p:last-child{
+   margin-top: 10px;
+   font:500 18px 'Quicksand', sans-serif;
+}
+
+footer a{
+   font: 500 18px 'Quicksand', sans-serif;
+}
+
+/* Footer - thanks */
+
+footer .thanks{
+   writing-mode: vertical-rl; 
+   transform: rotate(180deg);
+   margin-right: 2vh;
+   align-self: center;
+}
+
+footer .thanks p{
+   font:300 22px'Caveat', cursive;
+}
+
+footer .thanks .favourite {
+   display:inline-block;
+   transform:scale(1, 0,7);
+   font-size:1rem;
+}
