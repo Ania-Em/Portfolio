@@ -8,7 +8,7 @@
     <title>Portfolio - HTML i CSS</title>
     <meta name="description" content="Portfolio | Ania Marszałek | UX Design">
     <meta name="keywords" content="portfolio, ux design, web design">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@400;500;700&display=swap"
         rel="stylesheet">
@@ -16,21 +16,38 @@
 
 <body>
     <header>
-        <img src="./images/Headerlogo.png" alt="logo">
-        <nav>
+        <nav class="navbar">
+            <img class="logo" src="./images/Headerlogo.svg" alt="logo">
             <ul class="menu">
-                <li><a class="current" href="projects.html">PROJECTS</a></li>
+                <li><a class="current" href="projects.html">PROJECTS</a>
+                    <div class="current-box"></div>
+                </li>
                 <li><a href="other.html">OTHERS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
             </ul>
         </nav>
     </header>
-    <section>
-
+    <section class="landing">
+        <div class="email">
+            <p><span>Contact me: </span>aniammarszalek@gmail.com</p>
+        </div>
+        <div class="welcome-container">
+            <div class="welcome-box">
+                <p class="hello">Hello</p>
+                <p>I am beginner UX/UI designer, interested in e-commerce, searching for connections between design and
+                    technology.</p>
+            </div>
+            <p class="signature">Ania Marszałek</p>
+        </div>
     </section>
-    <section>
-
+    <section class="projects">
+        <div class="titles">
+            <div class=line></div>
+            <h1>PROJECTS</h1>
+            <div class=line></div>
+        </div>
     </section>
+
     <footer>
 
     </footer>
