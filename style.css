@@ -4,6 +4,7 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 /* Main style */
@@ -15,6 +16,8 @@
    --color-secondary: #518F7A;
    --color-tertiary: #C4C4C4;
    --margin-tiles: 200px;
+   --font-navbar:700 22px'Quicksand', sans-serif;
+   --font-handwriting:400 30px 'Caveat', cursive;
 }
 
 body {
@@ -44,8 +47,6 @@ h4{font:700 22px'Quicksand', sans-serif;}
 
 p{font:300 18px'Quicksand', sans-serif;}
 
-.hand-writing{font:300 18px'Caveat', cursive;}
-
 /* Header */
 
 header{
@@ -59,6 +60,7 @@ header{
    align-items: center; 
    border-bottom: 1px dotted;
    border-color: var(--color-tertiary);
+   z-index: 1;
 }
 
 .navbar {
@@ -72,7 +74,7 @@ header{
 
 .navbar .logo{
    height: 45px; 
-}
+   cursor: pointer;}
 
 /* Header - Menu */
 
@@ -80,30 +82,28 @@ header{
    display: flex;
 }
 
-.navbar .menu a { 
-   cursor:pointer;
-   text-align:center; 
-   height:100%;
+.navbar .menu a {
+   cursor: pointer;
+   height: 100%;
    display: flex;
-   align-items:center;
-   padding:5px 20px;
-   color: var( --color-main);
-   font:700 22px'Quicksand', sans-serif;
-   }
-
-.navbar .menu a.current{
+   align-items: center;
+   padding: 5px 20px;
+   color: inherit;
+   font: var(--font-navbar);
+ }
+ 
+ ul.menu li.current {
    color: var(--color-secondary);
-}
+ }
 
-.navbar .menu .current-box{
-   position: relative;
-   top:-5px;
-   displaY:flex;
-   margin:auto;
-   width: 115px;
-   height: 10px;
-   background-color: var(--color-secondary-transparent);
-}
+ ul.menu li.current::after {
+   content: "";
+   border-bottom: solid 10px var(--color-secondary-transparent);
+   width:80%;
+   margin: 0 auto;
+   display: block;
+   z-index: 2;
+ }
 
 /* Landing - main page */
 
@@ -156,7 +156,7 @@ section.landing .welcome-box .hello{
 
 section.landing .welcome-container p.signature{
    margin-top: 40px;
-   font:400 30px 'Caveat', cursive;
+   font: var(--font-handwriting);
 }
 
 /* Banner */
@@ -168,18 +168,18 @@ section.landing .welcome-container p.signature{
    align-items: center;
 }
 
-.banner h1{
-   padding: 0 70px; 
+.banner::before,
+.banner::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-main);
 }
 
-.banner h2{
-   padding: 0 70px; 
-}
-
-.banner-line{
-   height:1px;
-   flex-grow:10;
-   background-color:var(--color-main);
+.banner h2,h1{
+   margin: 0 6vw;
+   width: 500px;
+   white-space: nowrap
 }
 
 /* Projects - main page */
@@ -232,21 +232,22 @@ section.projects{
 
 .image-container .phototile{
    background-size: cover;
+   background-position: center;
    background-repeat: no-repeat;
    width:100%;
    height:100%;  
 }
 
 .image-container .phototile1{
-   background-image: url(./images/1project/1tile.png);
+   background-image: url(./images/1tile.png);
 }
 
 .image-container .phototile2{
-   background-image: url(./images/2project/2tile.png);
+   background-image: url(./images/2tile.png);
 }
 
 .image-container .phototile3{
-   background-image: url(./images/3project/3tile.png);
+   background-image: url(./images/3tile.png);
 }
 
 .image-container .phototile4{
@@ -313,8 +314,7 @@ footer .thanks .favourite {
    font-size:1rem;
 }
 
-
-/* Project 1,2,3,4 - landing */
+/* Others - landing */
 
 section .landingimage-container{
    width:100%;
@@ -349,21 +349,50 @@ article.gallery-container{
 }
 
 .gallery-photo-container{
-   max-width:1300px;
+   max-width:1200px;
    background-color: var(--background-color);
    border: 1px solid var(--color-main);
    padding: 15px 15px 50px 15px;
    margin: 20px;
 }
 
-.architecture-photo{   
-   width:25vw;
-   min-width:300px;
-   height:200px;
-   flex-basis: 25vw;
-  object-fit: cover;
-  vertical-align: bottom;
+.gallery-photo{   
+   width: 25vw;
+   min-width: 300px;
+   min-height: 100%;
+   object-fit: cover;
 }
 
-/* Project Others - gallery - architecture */
+/* About - landing */
 
+.profilephoto-container{
+   display:flex;
+   justify-content: space-around;
+   align-items:center;
+   background-color:var(--background-color);
+   border: 1px solid var(--color-main);
+   outline: solid 10px var(--color-secondary-transparent);
+   outline-offset: 25px;
+   padding:50px;
+   max-height: 60vh; 
+   max-width: 80vw;
+   width:750px;
+}
+
+img.profilephoto{  
+   object-fit: contain;
+   width: auto;
+   height:100%;
+   height:100%;
+}
+
+.profile-description{
+   margin-left: 50px;
+   display:flex;
+   flex-direction:column;
+}
+
+.profile-description p:first-child{
+   font:var(--font-handwriting);
+   margin-bottom: 20px;
+}
