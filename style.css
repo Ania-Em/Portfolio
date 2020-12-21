@@ -374,15 +374,14 @@ article.gallery-container{
    outline: solid 10px var(--color-secondary-transparent);
    outline-offset: 25px;
    padding:50px;
-   max-height: 60vh; 
+   height: 60vh; 
    max-width: 80vw;
    width:750px;
 }
 
 img.profilephoto{  
    object-fit: contain;
-   width: auto;
-   height:100%;
+   width:auto;
    height:100%;
 }
 
@@ -390,9 +389,16 @@ img.profilephoto{
    margin-left: 50px;
    display:flex;
    flex-direction:column;
+   justify-content: space-around;
 }
 
 .profile-description p:first-child{
    font:var(--font-handwriting);
    margin-bottom: 20px;
+}
+
+/* About - contact */
+
+.contact .banner {
+   margin-top:200px;
 }
