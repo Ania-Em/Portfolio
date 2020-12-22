@@ -118,6 +118,60 @@ section.landing{
    padding-top:90px;
 }
 
+/* Footer */
+
+footer{
+   display:flex;
+   justify-content:space-between;
+   margin-top: var(--margin-tiles);
+   height:200px;
+   background-color: var(--background-color);
+   border-top: 10px solid var(--color-secondary-transparent);
+   outline: solid 1px var(--color-main);
+   outline-offset: 15px;
+}
+
+.footer-container{
+   display:flex;
+   flex-direction:column;
+   padding-top:15px;
+   padding-left:2vw;
+   width:47vw;
+}
+
+footer .footer-tile{
+   padding: 10px;
+}
+
+footer .footer-tile p:last-child{
+   margin-top: 10px;
+   font:var(--font-p-bold);
+}
+
+footer a{
+   font: var(--font-p-bold);
+}
+
+/* Footer - thanks */
+
+footer .thanks{
+   writing-mode: vertical-rl; 
+   transform: rotate(180deg);
+   margin-right: 2vh;
+   align-self: center;
+   width: 5vw;
+}
+
+footer .thanks p{
+   font:300 22px'Caveat', cursive;
+}
+
+footer .thanks .favourite {
+   display:inline-block;
+   transform:scale(1, 0,7);
+   font-size:1rem;
+}
+
 /* Landing - main page - email */
 
 section.landing .email{
@@ -129,7 +183,7 @@ section.landing .email{
 
 /* Landing - main page -welcome-container */
 
-section.landing .welcome-container{
+.welcome-container{
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -137,7 +191,7 @@ section.landing .welcome-container{
    margin-top:50px;
 }
 
-section.landing .welcome-box{
+.welcome-box{
    background-color:var(--background-color);
    border: var(--border-box);
    outline: solid 10px var(--color-secondary-transparent);
@@ -151,15 +205,71 @@ section.landing .welcome-box{
    align-items:center; 
 }
 
-section.landing .welcome-box .hello{
+.welcome-box .hello{
    font:400 50px 'Caveat', cursive;
    margin-bottom: 50px;
 }
 
-section.landing .welcome-container p.signature{
+.welcome-container p.signature{
    margin-top: 40px;
    font: var(--font-handwriting);
 }
+
+/* Animation - Hello */
+
+.aboutme > p{
+   white-space:nowrap; 
+   overflow: hidden; 
+
+}
+
+.aboutme p:nth-child(1){
+   animation: 
+    typing 2s steps(30, end),
+    blink-caret .5s 4;
+    animation-fill-mode: forwards;
+}
+
+.aboutme p:nth-child(2){
+   opacity: 0;
+   animation: 
+    typing 2s steps(30, end),
+    blink-caret .5s 4;
+     animation-delay:2s; 
+     animation-fill-mode: forwards;
+}
+
+.aboutme p:nth-child(3){
+   opacity: 0;
+   animation: 
+    typing 2s steps(40, end),
+    blink-caret .5s 4;
+   animation-delay:4s; 
+   animation-fill-mode: forwards;
+}
+
+.aboutme p:nth-child(4){
+   opacity: 0;
+   animation: 
+    typing 2s steps(40, end),
+    blink-caret .5s 4;
+   animation-delay:6s;  
+   animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+   from { width: 0 ; opacity: 0;}
+   1% { opacity: 1;}
+   to { width: 100%;  opacity: 1; }
+ }
+ 
+ /* The typewriter cursor effect */
+ @keyframes blink-caret {
+   from, to { border-color: transparent }
+   50% { border-right: 0.3em solid var(--color-main); }
+   100% {border: none;}
+ }
+
 
 /* Banner */
 
@@ -260,60 +370,6 @@ section.projects{
 
 .banner-others{
    margin-top:var(--margin-tiles);
-}
-
-/* Footer */
-
-footer{
-   display:flex;
-   justify-content:space-between;
-   margin-top: var(--margin-tiles);
-   height:200px;
-   background-color: var(--background-color);
-   border-top: 10px solid var(--color-secondary-transparent);
-   outline: solid 1px var(--color-main);
-   outline-offset: 15px;
-}
-
-.footer-container{
-   display:flex;
-   flex-direction:column;
-   padding-top:15px;
-   padding-left:2vw;
-   width:47vw;
-}
-
-footer .footer-tile{
-   padding: 10px;
-}
-
-footer .footer-tile p:last-child{
-   margin-top: 10px;
-   font:var(--font-p-bold);
-}
-
-footer a{
-   font: var(--font-p-bold);
-}
-
-/* Footer - thanks */
-
-footer .thanks{
-   writing-mode: vertical-rl; 
-   transform: rotate(180deg);
-   margin-right: 2vh;
-   align-self: center;
-   width: 5vw;
-}
-
-footer .thanks p{
-   font:300 22px'Caveat', cursive;
-}
-
-footer .thanks .favourite {
-   display:inline-block;
-   transform:scale(1, 0,7);
-   font-size:1rem;
 }
 
 /* Others - landing */
@@ -703,14 +759,19 @@ section.landing .welcome-container{
 section.landing .welcome-box{
    outline: solid 5px var(--color-secondary-transparent);
    outline-offset: 10px;
-   padding:30px;
-   padding-top: 30px;
+   padding:10px;
+   padding-top: 20px;
    justify-content: center;
-   max-width: 250px;
-   max-height: 250px;
+   max-width: 275px;
+   max-height: 275px;
 }
 
-section.landing .welcome-container p.signature{margin-top: 20px;}
+section.landing .welcome-container p.signature{
+   margin-top: 10px;}
+
+.welcome-box .hello{
+   margin-bottom: 20px;
+}
 
 /* Projects - main page */
 
@@ -808,6 +869,4 @@ img.profilephoto{
    font: var( --font-p-bold);
    line-height:0.95;
 }
-
-
 }
