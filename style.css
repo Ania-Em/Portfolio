@@ -17,7 +17,8 @@
    --color-tertiary: #C4C4C4;
    --margin-tiles: 175px;
    --font-navbar:700 22px'Quicksand', sans-serif;
-   --font-p-bold: 400 18px'Quicksand', sans-serif;
+   --font-p:300 18px'Quicksand', sans-serif;
+   --font-p-bold: 500 18px'Quicksand', sans-serif;
    --font-handwriting:400 30px 'Caveat', cursive;
    --border-box: 1px solid var(--color-main);
 }
@@ -180,7 +181,7 @@ section.landing .welcome-container p.signature{
 .banner h2,h1{
    margin: 0 6vw;
    width: 500px;
-   white-space: nowrap
+   white-space: nowrap;
 }
 
 /* Projects - main page */
@@ -288,11 +289,11 @@ footer .footer-tile{
 
 footer .footer-tile p:last-child{
    margin-top: 10px;
-   font:500 18px 'Quicksand', sans-serif;
+   font:var(--font-p-bold);
 }
 
 footer a{
-   font: 500 18px 'Quicksand', sans-serif;
+   font: var(--font-p-bold);
 }
 
 /* Footer - thanks */
@@ -302,7 +303,7 @@ footer .thanks{
    transform: rotate(180deg);
    margin-right: 2vh;
    align-self: center;
-   widows: 5vw;
+   width: 5vw;
 }
 
 footer .thanks p{
@@ -457,7 +458,7 @@ margin-left: 10px;
    display: block;
    position:relative;
    top: 1.5em;
-   z-index: 2;
+   z-index: 0.5;
    border-radius:50%;
 }
 
@@ -514,11 +515,11 @@ section.contact{
 }
 
 .contact-form label{
-   font:300 18px'Quicksand', sans-serif;
+   font:var(--font-p);
 }
 
 .contact-form input, .contact-form textarea{
-   font:300 18px'Quicksand', sans-serif;
+   font:var(--font-p);
    margin-top:5px;
    margin-bottom: 30px;
    border:none;
@@ -532,6 +533,7 @@ section.contact{
 .contact-form textarea{
    height: 12rem;
   line-height: 1.5rem;
+  resize: none;
 }
 
 #btn-submit{
@@ -549,8 +551,7 @@ section.contact{
 
 @media (max-width: 950px) {
 
-   :root{
-      --margin-tiles: 150px;}
+   :root{--margin-tiles: 150px;}
 
    /* Projects */
 
@@ -570,9 +571,9 @@ section.contact{
       margin-top: 40px;
    }
 
-   .link-toproject{
-      margin-top: 20px;
-   }
+   .description-container h3{margin:0 auto;}
+
+   .link-toproject{ margin-top: 20px;}
 
       /* About */
 
@@ -593,10 +594,220 @@ section.contact{
       flex-direction: column;
       align-items: center;
       margin-left:0;
+      margin-top:15px;
    }
 
-   .profile-description p:first-child{
-      margin-top: 20px;
+   .form-container{
+      padding: 50px;
+      width:80vw;
    }
+
+}
+
+@media (max-width: 550px){
+
+/* Main */
+
+   body {background-size: 25px 25px;}
+
+   :root{
+      --margin-tiles: 50px;
+      --font-p-bold: 400 16px'Quicksand', sans-serif;
+      --font-p: 400 16px'Quicksand', sans-serif;
+   }
+      
+      h1{font:700 28px'Quicksand', sans-serif;}
+      
+      h2{font:700 28px'Quicksand', sans-serif;}
+      
+      h3{
+         font:700 24px'Quicksand', sans-serif;
+         line-height: 0.95em;
+      }
+      
+      h4{font:700 19px'Quicksand', sans-serif;}
+      
+      p{font:300 16px'Quicksand', sans-serif;}   
+
+/* Footer */
+
+      footer{
+         flex-direction:column;
+         align-items:center;
+         justify-content: flex-start;
+         height:fit-content;
+         outline: none
+      }
+      
+      .footer-container{
+         align-items:center;
+         padding-left:none;
+      }
+      
+      .footer-tile{
+         display:flex;
+         flex-direction:column;
+         align-items: center;
+      }
+
+      /* Footer - thanks */
+ 
+      footer .thanks{
+         writing-mode: horizontal; 
+         transform: rotate(-90deg);
+         margin-right: 0vh;
+         width: fit-content;
+         justify-content: flex-end;
+         align-self:none;
+         height:fit-content;
+      }
+
+      footer .thanks p{
+         white-space: nowrap;
+      }  
+
+/* Header */
+
+      header{height: 60px;}
+
+      .navbar .logo{height: 25px; }
+
+      .navbar .menu a {
+         padding: 0px 10px;
+         font: 700 18px'Quicksand', sans-serif;
+      }
+
+      ul.menu li.current::after {border-bottom: solid 5px var(--color-secondary-transparent);}
+
+/* Projects - Landing  */
+
+section.landing{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height:100vh;
+   width:100%;
+   padding: 60px;
+}
+
+section.landing .email{display:none;}
+
+section.landing .welcome-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-end;
+   margin-top:50px;
+}
+
+section.landing .welcome-box{
+   outline: solid 5px var(--color-secondary-transparent);
+   outline-offset: 10px;
+   padding:30px;
+   padding-top: 30px;
+   justify-content: center;
+   max-width: 250px;
+   max-height: 250px;
+}
+
+section.landing .welcome-container p.signature{margin-top: 20px;}
+
+/* Projects - main page */
+
+.project .image-container{
+   width:  80vw;
+   height: 80vw;
+   padding: 20px;
+   margin-right: 0px;
+}
+
+.project-container .description-container{
+   margin-top:30px;
+   width: 80vw;
+}
+
+.description-container h3{ 
+   margin:0 auto;}
+
+.project-container .description-container .underline{
+   margin: 15px 0px 30px;}
+
+.link-toproject{
+   font:500 18px'Quicksand', sans-serif;
+   text-align:right;
+}
+
+/* Others */
+
+section.landing-others{
+   background-color: var(--background-color);
+   padding:30px;
+}
+
+section .landingimage-container{
+   width:100%;
+   height: 100%;
+   padding:0px;
+   padding-top: 60px;
+}
+
+section .landingimage{
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   width:100%;
+   height:100%;   
+}
+
+/* About */
+
+.landing-about{
+   height:fit-content;
+   width:100%;
+}
+
+.profilephoto-container{
+   outline: solid 5px var(--color-secondary-transparent);
+   outline-offset: 15px;
+   padding:30px;
+   margin-top:0px;
+   margin-bottom:100px;
+}
+
+img.profilephoto{
+   width: 200px; 
+   height:auto;
+ }
+
+.profile-description{
+   flex-direction: column;
+   align-items: center;
+   margin-left:0;
+   margin-top:15px;
+}
+
+.form-container{
+    padding: 20px;
+   width:90vw;
+   margin-bottom:20px ;
+}
+
+.contact-form input, .contact-form textarea{
+   margin-bottom: 15px;
+   background-color:transparent;
+   width: 100%;
+   padding:10px;
+}
+
+#btn-submit{
+   margin-top:15px;
+   background-color:var(--color-secondary-transparent);
+   width: 100%;
+   border: var(--border-box);
+   padding: 10px;
+   font: var( --font-p-bold);
+   line-height:0.95;
+}
+
 
 }
