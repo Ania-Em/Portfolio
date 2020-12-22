@@ -106,7 +106,7 @@ header{
    z-index: 2;
  }
 
-/* Landing - main page */
+/* Landing  */
 
 section.landing{
    display:flex;
@@ -545,3 +545,58 @@ section.contact{
 }
 
 
+/* Projects - responsive */
+
+@media (max-width: 950px) {
+
+   :root{
+      --margin-tiles: 150px;}
+
+   /* Projects */
+
+   .project-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width:fit-content
+   }
+
+   .project .image-container{
+      margin-right:0;
+   }
+
+   .project-container .description-container{
+      width: 500px;
+      margin-top: 40px;
+   }
+
+   .link-toproject{
+      margin-top: 20px;
+   }
+
+      /* About */
+
+   .profilephoto-container{
+      flex-direction:column;
+      justify-content: center;
+      width:80vw;
+      width:500px;
+      height:fit-content;
+   }
+
+   img.profilephoto{
+     width: 300px; 
+     height:auto;
+   }
+
+   .profile-description{
+      flex-direction: column;
+      align-items: center;
+      margin-left:0;
+   }
+
+   .profile-description p:first-child{
+      margin-top: 20px;
+   }
+
+}
