@@ -386,9 +386,26 @@ section.projects{
    width: 100%;
 }
 
+.link-toproject:after{
+   content:url("./images/arrow1.svg");
+   width: 100%;
+   display:block;
+   text-align:center;
+}
+
 .link-toproject{
-   font:500 18px'Quicksand', sans-serif;
-   text-align:right;
+   margin-top:10px;
+   text-align:left;
+   width:100%;
+   display:flex;
+}
+
+.link-toproject p{
+   margin-right: 10px;
+   white-space: nowrap;
+   width:fit-content;
+   font: var(--font-p-bold);
+  
 }
 
 /* Projects - Photos - main page */
