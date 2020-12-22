@@ -64,7 +64,6 @@ header{
    border: 1px dotted var(--color-tertiary);
    z-index: 1;
 }
-
 .navbar {
    display: flex;
    justify-content: space-between;
@@ -649,7 +648,9 @@ section.contact{
 
 .contact-form textarea:focus, .contact-form input:focus{
    border-radius: 0px;
-   outline: 1px solid var(--color-secondary-transparent);
+   border-color: var(--color-secondary-transparent);
+   border-width: 2px;
+   outline:none;
 }
 
 .contact-form input, .contact-form textarea{
@@ -723,6 +724,7 @@ section.contact{
       width:80vw;
       width:500px;
       height:fit-content;
+      margin-top:80px;
    }
 
    img.profilephoto{
@@ -808,14 +810,24 @@ section.contact{
 
 /* Header */
 
-      header{height: 60px;}
+.navbar {
+flex-direction:column;
+}
+   header{
+      height: 80px;
+      background-color:var(--background-color)
+   }
 
-      .navbar .logo{height: 25px; }
+   .navbar .logo{
+       margin-top:5px;
+      height: 25px; 
+      margin-bottom:5px;
+   }
 
-      .navbar .menu a {
-         padding: 0px 10px;
-         font: 700 18px'Quicksand', sans-serif;
-      }
+   .navbar .menu a {
+      padding: 0px 15px;
+      font: 700 18px'Quicksand', sans-serif;
+   }
  
    .navbar .logo:hover{
        height: 30px; 
@@ -836,17 +848,18 @@ section.contact{
       border-bottom: solid 5px var(--color-main);
     }
 
-     ul.menu li.current::after {
-         border-bottom: solid 5px var(--color-secondary-transparent);}
+   ul.menu li.current::after {
+       border-bottom: solid 5px var(--color-secondary-transparent);}
 
 /* Projects - Landing  */
 
 section.landing{
+   margin-top:0px;
    display:flex;
    justify-content: center;
    align-items: center;
    height:100vh;
-   width:100%;
+   width:100vw;
    padding: 60px;
 }
 
@@ -857,7 +870,7 @@ section.landing .welcome-container{
    flex-direction: column;
    justify-content: center;
    align-items: flex-end;
-   margin-top:50px;
+   margin-top:80px;
 }
 
 section.landing .welcome-box{
@@ -879,6 +892,12 @@ section.landing .welcome-container p.signature{
 
 /* Projects - main page */
 
+section.landing-project{
+   height:100vh;
+   margin-top:0px;
+   padding-top:0px;
+}
+
 .project .image-container{
    width:  80vw;
    height: 80vw;
@@ -897,9 +916,21 @@ section.landing .welcome-container p.signature{
 .project-container .description-container .underline{
    margin: 15px 0px 30px;}
 
-.link-toproject{
+.link-toproject p{
    font:500 18px'Quicksand', sans-serif;
-   text-align:right;
+   text-align:center;
+}
+
+.link-toproject:after{
+   content:url("./images/arrow1.svg");
+   width:100%;
+   display:block;
+   overflow: hidden;
+}
+
+.link-toproject{
+   flex-direction: column;
+   align-items:center;
 }
 
 /* Others */
@@ -914,7 +945,7 @@ section .landingimage-container{
    width:100%;
    height: 100%;
    padding:0px;
-   padding-top: 60px;
+   margin-top:80px;
 }
 
 section .landingimage{
@@ -925,7 +956,16 @@ section .landingimage{
    height:100%;   
 }
 
-.gallery-photo{ width: 80vw;}
+.gallery-photo-container{ width: 95vw;}
+
+.gallery-photo{
+   min-width:100%; 
+   height:auto;
+}
+
+.parametric-h2{
+   font-size:22px;
+}
 
 /* About */
 
@@ -939,6 +979,7 @@ section.landing-about{
    outline-offset: 10px;
    padding:30px;
    height:100%;
+   margin-top:80px;
 }
 
 img.profilephoto{
@@ -951,6 +992,10 @@ img.profilephoto{
    align-items: center;
    margin-left:0;
    margin-top:15px;
+}
+
+.experience .banner{
+   margin-top: 0px;
 }
 
 .form-container{
