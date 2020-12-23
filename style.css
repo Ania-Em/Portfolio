@@ -550,12 +550,13 @@ img.profilephoto{
    display:flex;
    width:100%;
    align-items:center;
+   flex-direction:column;
 }
 
 .line-title{
 white-space: nowrap;
 font: var( --font-p-bold);
-margin-left: 10px;
+margin-top: 30px;
 }
 
  .line{
@@ -580,7 +581,7 @@ margin-left: 10px;
    margin: 0 auto;
    display: block;
    position:relative;
-   top: 1.5em;
+   top: 1em;
    z-index: 0.5;
    border-radius:50%;
 }
@@ -814,7 +815,7 @@ section.contact{
 flex-direction:column;
 }
    header{
-      height: 80px;
+      height: 90px;
       background-color:var(--background-color)
    }
 
@@ -870,7 +871,7 @@ section.landing .welcome-container{
    flex-direction: column;
    justify-content: center;
    align-items: flex-end;
-   margin-top:80px;
+   margin-top:90px;
 }
 
 section.landing .welcome-box{
@@ -945,7 +946,7 @@ section .landingimage-container{
    width:100%;
    height: 100%;
    padding:0px;
-   margin-top:80px;
+   margin-top:90px;
 }
 
 section .landingimage{
