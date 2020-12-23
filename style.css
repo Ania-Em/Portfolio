@@ -28,6 +28,7 @@ body {
    background-attachment: fixed;
     background-position: 0 0;
     background-size: 35px 35px;
+    width:100vw;
  }
 
 a, a:visited{
@@ -54,7 +55,7 @@ p{font:300 18px'Quicksand', sans-serif;}
 
 header{
    background-color: var(--background-color);
-   width:100%;
+   width:99vw;
    height: 90px;
    padding-left: 2%;
    padding-right: 2%;
@@ -64,11 +65,12 @@ header{
    border: 1px dotted var(--color-tertiary);
    z-index: 1;
 }
+
 .navbar {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width:100%;
+   width:99vw;
 }
 
 /* Header - Logo */
@@ -147,6 +149,8 @@ footer{
    border-top: 10px solid var(--color-secondary-transparent);
    outline: solid 1px var(--color-main);
    outline-offset: 15px;
+   width:100vw;
+   
 }
 
 .footer-container{
@@ -155,6 +159,7 @@ footer{
    padding-top:15px;
    padding-left:2vw;
    width:47vw;
+   
 }
 
 footer .footer-tile{
@@ -188,6 +193,7 @@ footer .thanks .favourite {
    display:inline-block;
    transform:scale(1, 0,7);
    font-size:1rem;
+   overflow: hidden;
 }
 
 /* Landing - main page - email */
@@ -536,6 +542,7 @@ img.profilephoto{
    align-items: center;
    margin-right: 2vw;
    margin-left: 2vw;
+   overflow: hidden;
 }
 
 .timeline-container{
@@ -548,7 +555,7 @@ img.profilephoto{
 
 .line-container{
    display:flex;
-   width:100%;
+   width:100vw;
    align-items:center;
    flex-direction:column;
 }
@@ -560,7 +567,7 @@ margin-top: 30px;
 }
 
  .line{
-   width:100%;
+   width:100vw;
    height:5px;
    background-color:var(--color-secondary-transparent);
 }
@@ -689,6 +696,9 @@ section.contact{
 @media (max-width: 950px) {
 
    :root{--margin-tiles: 150px;}
+
+   /* Footer */
+
 
    /* Projects */
 
