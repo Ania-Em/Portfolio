@@ -4,30 +4,41 @@ Autorka: Anna Marszałek
 
 ### Użyte technologie:
 
-    * HTML
-    * CSS
+-   HTML
+-   CSS
 
-### Dodatkowwe narzędzia:
+### Dodatkowe narzędzia:
 
-    * Icono
-    * Google Fonts
+-   Icono
+-   Google Fonts
 
 ## Opis projektu:
 
 Pierwszy indywidualny projekt realizowany na kursie CodersCamp 2020 będący portfolio autorki. 
-Wykonany samodzielnie przy użyciu dotychczas poznanej technologii. 
+Wykonany samodzielnie przy użyciu dotychczas poznanej technologii, bez użycia gotowych frameworków lub bilbliotek styli.
  
 ### Założenia projektu: 
-    * minimalistyczny design
-    * estetyka
-    * responsywność
-    * czytelność
 
+-   minimalistyczny design
+-   estetyka
+-   responsywność
+-   czytelność
+-   dostępność
 
-Na stronie można wyróżnic następujące elementy:
+### Zagadnienia 
 
-nawigację
-sekcję powitalną
-sekcję projektów :
-   krótki opis proejktu 
-   wizualne przedstawienie projektu 
+#### Zaprezentowanie praktycznej znajomości poniższych zagadnień związanych z HTML & CSS:
+
+-   Box-model
+-   Kaskadowość CSS
+-   Selektory CSS
+-   Popularne tagi HTML
+-   Jak podpinać CSSa do HTMLa
+-   Zapisywanie kolorów
+-   Stylowanie tekstu
+-   Zewnętrzne ikony/fonty (google fonts)
+-   Flexbox i/lub CSS Grid
+-   Position (absolute, relative)
+-   Animacje keyframes
+-   Formularz (bez funkcji wysłania formularza)
+-   Responsive Web Design
