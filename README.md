@@ -1,22 +1,29 @@
-Nazwa projektu: Portfolio
+# Portfolio UX
 
-Wykonawca: Anna Marszałek
+Autorka: Anna Marszałek
 
-Użyte technologie:
+### Użyte technologie:
 
-HTML
-CSS
+    * HTML
+    * CSS
 
-Dodatkowwe narzędzia:
+### Dodatkowwe narzędzia:
 
-Icono
-Google Fonts
+    * Icono
+    * Google Fonts
 
+## Opis projektu:
 
-Opis projektu:
-
- Pierwszy indywidualny projekt realizowany na kursie CodersCamp 2020 będący portfolio autorki. 
+Pierwszy indywidualny projekt realizowany na kursie CodersCamp 2020 będący portfolio autorki. 
+Wykonany samodzielnie przy użyciu dotychczas poznanej technologii. 
  
+### Założenia projektu: 
+    * minimalistyczny design
+    * estetyka
+    * responsywność
+    * czytelność
+
+
 Na stronie można wyróżnic następujące elementy:
 
 nawigację
@@ -24,9 +31,3 @@ sekcję powitalną
 sekcję projektów :
    krótki opis proejktu 
    wizualne przedstawienie projektu 
-
-
-minimalistyczny design
-estetyka
-responsywność
-czytelność
