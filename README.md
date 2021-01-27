@@ -1,4 +1,4 @@
-# Portfolio UX
+# Portfolio UX/UI
 
 Autorka: Anna Marszałek
 
