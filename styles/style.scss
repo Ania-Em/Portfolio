@@ -468,6 +468,7 @@ section.landing .email {
 .welcome-box .hello {
   font: 400 50px "Caveat", cursive;
   margin-bottom: 50px;
+  text-shadow:3px 3px 0px #F6B8A0;
 
   @media (max-width: $media-query2) {
     margin-bottom: 20px;
@@ -631,12 +632,12 @@ section.projects {
 //Images
 
 .project-image{
-  background-image: url("../assets/images/Dentico/1.png");
+  background-image: url("../assets/images/2/1.png");
   background-position:center;
   background-size: contain;
   background-repeat: no-repeat;
-  height:200px;
-  width:200px;
+  height:100%;
+  width:100%;
 }
 
 // Arrows
@@ -693,7 +694,7 @@ section.projects {
 }
 
 .slide-active{
-  background-color:$color-main-dark;
+  background-color: $color-main-dark;
 }
 
 /* Project- text */
