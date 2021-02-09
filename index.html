@@ -2,16 +2,16 @@
 <html lang="pl">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Portfolio - HTML i CSS</title>
-    <meta name="description" content="Portfolio | Ania Marszałek | UX Design">
-    <meta name="keywords" content="portfolio, ux design, web design">
-    <link rel="stylesheet" href="./style.css">
+    <title> Anna Marszałek-Portfolio UX/UI</title>
+    <meta name="description" content="Portfolio | Ania Marszałek | UX/UI Design">
+    <meta name="keywords" content="portfolio, ux design, web design, ui design">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="icono.min.css">
 </head>
@@ -20,11 +20,11 @@
     <header>
         <nav class="navbar">
             <a href="index.html">
-                <img class="logo" src="./images/Headerlogo.svg" alt="logo"></a>
+                <img class="logo" src="./assets/svg/Headerlogo.svg" alt="logo" onclick="playmenu()"></a>
             <ul class="menu">
-                <li class="current"><a href="#projects">PROJECTS</a></li>
-                <li><a href="other.html">OTHERS</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li class="current"><a href="#projects" onclick="playmenu()">PROJECTS</a></li>
+                <li><a href="other.html" onclick="playmenu()">OTHERS</a></li>
+                <li><a href="about.html" onclick="playmenu()">ABOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
             <p>Contact me: aniammarszalek@gmail.com</p>
         </div>
         <div class="welcome-container">
-            <div class="welcome-box">
+            <div class="welcome-box anim" data-delay="0s"> 
                 <p class="hello">Hello</p>
                 <div class="aboutme">
                     <p>I am beginner UX/UI designer, </p>
@@ -45,82 +45,165 @@
             <p class="signature">Ania Marszałek</p>
         </div>
     </section>
-    <section class="projects">
-        <div class="banner">
-            <h1>PROJECTS</h1>
-        </div>
-        <article id="projects" class="project project2">
+    <div class="banner anim" data-delay="0s">
+        <h1>PROJECTS</h1>
+    </div>
+    <section class="projects" >
+        <article id="projects" class="project project1 anim" data-delay="0.5s">
             <div class="project-container">
                 <div class="image-container">
-                    <div class="phototile1 phototile"></div>
-                    <a href="http://bit.ly/2WvFMSi" target="_blank">
-                        <div class="hover-phototile">
-                            <p>View prototype!</p>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-previous">
+                            <div class="iconify"></div>
                         </div>
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="txt-container">
-                        <h3>DENTICO</h3>
-                        <div class="underline"></div>
-                        <P class="project-description">Dentico is an application that allows patients of a private
-                            dental
-                            clinic to book doctor's appointments from anywhere and anytime. The access to all available
-                            slots of time of every dentist makes planning and fitting the visit into a busy schedule of
-                            a
-                            patient a lot easier. It improves the contact between clinic and patient, and also makes the
-                            whole process of dental care clearer and faster. </P>
                     </div>
-                    <a class="link-toproject" href="http://bit.ly/2WvFMSi" target="_blank">
-                        <p>View prototype</p>
-                    </a>
-                </div>
-            </div>
-        </article>
-        <article class="project project1">
-            <div class="project-container">
-                <div class="image-container">
-                    <div class="phototile2 phototile"></div>
-                    <a href="http://bit.ly/2LXOyXz" target="_blank">
-                        <div class="hover-phototile">
-                            <p>View prototype!</p>
+                    <div class=project-image ></div>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-next">
+                            <div class="iconify"></div>
                         </div>
-                    </a>
+                    </div>
+                    <div class="slider">
+                        <div class="dot dot1" aria-label="Show slide 1 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot2" aria-label="Show slide 2 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot3" aria-label="Show slide 3 of 3" aria-selected="true" role="button">
+                        </div>
+                    </div>
                 </div>
                 <div class="description-container">
                     <div class="txt-container">
                         <h3>BOHO DESIGN</h3>
-                        <div class="underline"></div>
                         <P class="project-description">Boho design studio is an interior design one-person business. The
                             newly designed website had to clearly present the style of the designer to potential
                             clients.
                             The use of colours, typography and photos should reflect the characteristic boho style, yet
-                            still, keep it at the high level of elegance. The purpose of the website was also to
-                            advertise a
-                            new offer introduced that was furniture renovation and to accommodate the space for the
-                            designer
-                            to share the thoughts, ideas, tips and tricks for a Boho home.</P>
+                            still, keep it at the high level of elegance. </P>
+                    </div>
+                    <div class="roles">
+                        <div class="UI role">UI - prototype</div>
+                        <div class="GD role">Graphic Design</div>
+                        <div class="UX role">UX - research</div>
                     </div>
                     <a class="link-toproject" href="http://bit.ly/2LXOyXz" target="_blank">
-                        <p>View prototype</p>
+                        See project<div class="iconify"></div>
                     </a>
                 </div>
             </div>
         </article>
-        <article class="project project3">
+        <article class="project project2 anim" data-delay="0s">
             <div class="project-container">
                 <div class="image-container">
-                    <div class="phototile3 phototile"></div>
-                    <a href="http://bit.ly/3h1FgVO" target="_blank">
-                        <div class="hover-phototile">
-                            <p>View prototype!</p>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-previous">
+                            <div class="iconify"></div>
                         </div>
+                    </div>
+                    <div class=project-image></div>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-next">
+                            <div class="iconify"></div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="dot dot1" aria-label="Show slide 1 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot2" aria-label="Show slide 2 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot3" aria-label="Show slide 3 of 3" aria-selected="true" role="button">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div class="txt-container">
+                        <h3>DENTICO</h3>
+                        <P class="project-description">Dentico is an application that allows patients of a private
+                            dental
+                            clinic to book doctor's appointments from anywhere and at anytime. It improves the contact
+                            between clinic and patient, and also makes the
+                            whole process of dental care faster and easier. </P>
+                    </div>
+                    <div class="roles">
+                        <div class="UI role">UI - prototype</div>
+                        <div class="GD role">Graphic Design - Logo, branding</div>
+                        <div class="UX role">UX - research, usability tests</div>
+                    </div>
+                    <a class="link-toproject" href="http://bit.ly/2WvFMSi" target="_blank">
+                        <p>See project</p>
+                        <div class="iconify"></div>
                     </a>
+                </div>
+            </div>
+        </article>
+        <article class="project project3 anim" data-delay="0s">
+            <div class="project-container">
+                <div class="image-container">
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-previous">
+                            <div class="iconify"></div>
+                        </div>
+                    </div>
+                    <div class=project-image></div>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-next">
+                            <div class="iconify"></div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="dot dot1 " aria-label="Show slide 1 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot2" aria-label="Show slide 2 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot3" aria-label="Show slide 3 of 3" aria-selected="true" role="button">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container">
+                    <div class="txt-container">
+                        <h3>CYBER CHESS</h3>
+                        <P class="project-description">The project was created during Programming boot-camp course:
+                            CodersCamp 2021 as a group project. The task was to create from scratch a web application
+                            that would be written using Typescript language. The style is inspired by a world-wide known
+                            computer game- Cyberpunk. </P>
+                    </div>
+                    <div class="roles">
+                        <div class="UI role">Web-development</div>
+                        <div class="GD role">Graphic Design</div>
+                        <div class="UX role">UI - prototype</div>
+                    </div>
+                    <a class="link-toproject" href="http://bit.ly/Cyber-chess" target="_blank">
+                        <p>See project</p>
+                        <div class="iconify"></div>
+                    </a>
+                </div>
+        </article>
+        <article class="project project4 anim" data-delay="0s">
+            <div class="project-container">
+                <div class="image-container">
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-previous">
+                            <div class="iconify"></div>
+                        </div>
+                    </div>
+                    <div class=project-image></div>
+                    <div class="arrow-wrapper">
+                        <div class="arrow arrow-next">
+                            <div class="iconify"></div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="dot dot1 " aria-label="Show slide 1 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot2" aria-label="Show slide 2 of 3" aria-selected="true" role="button">
+                        </div>
+                        <div class="dot dot3" aria-label="Show slide 3 of 3" aria-selected="true" role="button">
+                        </div>
+                    </div>
                 </div>
                 <div class="description-container">
                     <div class="txt-container">
                         <h3>RUNNING APP</h3>
-                        <div class="underline"></div>
                         <P class="project-description">This project was created as an excercise during the recruitment
                             process. The app is created for runners who want to monitor their training and progress. App
                             is
@@ -128,45 +211,19 @@
                             but
                             also semi-professional runners.</P>
                     </div>
-                    <a class="link-toproject" href="http://bit.ly/3h1FgVO" target="_blank">
-                        <p>View prototype</p>
-                    </a>
-                </div>
-        </article>
-        <div class="banner banner-others">
-            <h2>OTHERS</h2>
-        </div>
-        <article class="project other">
-            <div class=project-container>
-                <div class="image-container">
-                    <div class="phototile4 phototile"></div>
-                    <a href="./other.html">
-                        <div class="hover-phototile">
-                            <p>View projects!</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="description-container">
-                    <div class="txt-container">
-                        <h3>OTHER PROJECTS</h3>
-                        <div class="underline"></div>
-                        <P class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                            molestiae officia facere fugiat nam ratione vel error mollitia velit nihil maiores
-                            praesentium debitis eum non distinctio id amet laborum, quia, magni consequatur sequi odit
-                            consequuntur aperiam! Debitis id temporibus non accusamus. Voluptatem recusandae fuga alias
-                            dolor asperiores nostrum, veniam perspiciatis!</P>
+                    <div class="roles">
+                        <div class="UI role">UI - prototype</div>
+                        <div class="GD role">Graphic Design</div>
+                        <div class="UX role">UX - research</div>
                     </div>
-                    <a class="link-toproject" href="./other.html">
-                        <p>View projects</p>
+                    <a class="link-toproject" href="http://bit.ly/3h1FgVO" target="_blank">
+                        <p>See project</p>
+                        <div class="iconify"></div>
                     </a>
                 </div>
-            </div>
         </article>
     </section>
     <footer>
-        <div class="btn-contact">
-            <a href="about.html#contact">Contact</a>
-        </div>
         <div class="footer-text">
             <div class="personal-info footer-container">
                 <div class="author footer-tile">
@@ -193,6 +250,7 @@
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
