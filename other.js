@@ -40,7 +40,6 @@ class ImagesSlidesOthers{
    sliderActive1.classList.add("slide-active");
  });
 
-
  //Parametric
 
  const projectGalleryOthers2= new ImagesSlidesOthers(3,2);
