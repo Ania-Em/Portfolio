@@ -132,6 +132,7 @@ body {
   background-attachment: fixed;
   background-position: 0 0;
   background-size: 20px 20px;
+  cursor: url('/assets/svg/cursor.svg'), auto;
 
   @media (max-width: $media-query2) {
     background-size: 15px 15px;
@@ -294,7 +295,6 @@ section.landing {
   align-items: center;
   height: calc(100vh - 100px);
   width: 100%;
-  margin-bottom: 10vh;
 
   @media (max-width: $media-query2) {
     margin-top: 0px;
@@ -315,9 +315,9 @@ footer {
   height: 100%;
   background-color: $color-background;
   border-top: 1px solid $color-secondary-dark;
-  width: 100vw;
   align-items: center;
   margin-top: $margin-screen;
+  padding-bottom: 30px;
 
   @media (max-width: $media-query1) {
     margin-top: $margin-tablet;
@@ -433,6 +433,8 @@ section.landing .email {
   }
 }
 
+
+
 /* Landing - main page -welcome-container */
 
 .welcome-container {
@@ -462,6 +464,8 @@ section.landing .email {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position:relative;
+  transform-origin: 50% 50%;
 
   @media (max-width: $media-query2) {
     outline: solid 5px $color-secondary-light;
@@ -471,6 +475,19 @@ section.landing .email {
     justify-content: center;
     max-width: 275px;
     max-height: 275px;
+  }
+}
+
+.anim {opacity: 0;}
+
+@keyframes anim1 {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to  {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -878,7 +895,7 @@ section.projects-others .image-container {
   justify-content: space-between;
   position:relative;
    @extend %margin-tiles;
-   margin-bottom: 40px;
+   margin-bottom: 50px;
 
   @media (max-width: $media-query1) {
     margin-right: 0;
@@ -920,13 +937,8 @@ section.projects-others .project-image{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: $color-background;
-  border: $border-box;
-  outline: solid 10px $color-secondary-light;
-  outline-offset: 25px;
   padding: 50px;
-  height: 60vh;
-  max-width: 80vw;
+  height:500px;
   width: 750px;
 
   @media (max-width: $media-query1) {
@@ -947,10 +959,14 @@ section.projects-others .project-image{
   }
 }
 
-img.profilephoto {
-  object-fit: contain;
-  width: auto;
+.profilephoto {
+  background-image: url("../assets/images/profile.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 250px;
   height: 100%;
+  position:relative;
 
   @media (max-width: $media-query1) {
     width: 300px;
@@ -964,11 +980,45 @@ img.profilephoto {
   }
 }
 
+//Animation - hand
+
+.hand{
+  background-image: url("../assets/images/hand.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width:100px;
+  height:100px;
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;        
+  animation-iteration-count: infinite; 
+  transform-origin: 70% 70%; 
+  display: inline-block;
+  transform: scale(2) ;
+  margin: 0 auto ; 
+  position: absolute;
+  bottom:0;
+  right:-20px;
+
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) scale(1)}
+ 10% { transform: rotate(14.0deg) scale(1.2)}  /* The following five values can be played with to make the waving more or less extreme */
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+100% { transform: rotate( 0.0deg) }
+}
+
 .profile-description {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width:300px;
 
   @media (max-width: $media-query1) {
     flex-direction: column;
@@ -987,198 +1037,68 @@ img.profilephoto {
 
 .profile-description p:first-child {
   font: $font-handwriting;
-  margin-bottom: 20px;
-}
-
-/* About- my journey */
-
-.experience .banner {
-  margin-top: 100px;
-}
-
-.diagram-container {
-  @extend %margin-tiles;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2vw;
-  margin-left: 2vw;
-  overflow: hidden;
-}
-
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  width: 80vw;
-  margin-bottom: 50px;
-  align-items: center;
-}
-
-.line-container {
-  display: flex;
-  width: 100vw;
-  align-items: center;
-  flex-direction: column;
-}
-
-.line-title {
-  white-space: nowrap;
-  @extend %font-pbold;
-  margin-top: 30px;
-}
-
-.line {
-  width: 100vw;
-  height: 5px;
-  background-color: $color-secondary-light;
-}
-
-.event-container {
-  display: flex;
-}
-
-.timeline-container > p,
-.event-container > p {
-  font-size: 14px;
-}
-
-.timeline-container > p::after,
-.event-container > p::after {
-  content: "";
-  background-color: $color-secondary-light;
-  height: 1.5em;
-  width: 1.5em;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  top: 1em;
-  z-index: 0.5;
-  border-radius: 50%;
-}
-
-/* Timelines-lines */
-
-.line-web {
-  margin-left: 30vw;
-}
-
-.line-ecommerce {
-  margin-left: 20vw;
-}
-
-.line-uxdesign {
-  margin-left: 10vw;
-}
-
-.line-arch {
-  margin-right: 20vw;
-}
-
-.event-container > p {
-  margin-left: 3vw;
-  position: relative;
-  left: -20vw;
-}
-
-/* About - contact */
-
-.contact .banner {
-  @extend %margin-tiles;
-}
-
-section.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-container {
-  background-color: $color-background;
-  padding: 70px;
-  @extend %margin-tiles;
-  border: $border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 750px;
-
-  @media (max-width: $media-query1) {
-    padding: 50px;
-    width: 80vw;
-  }
-
-  @media (max-width: $media-query2) {
-    padding: 20px;
-    width: 90vw;
-    margin-bottom: 20px;
-  }
-}
-
-.form-container:hover {
-  border: 3px solid $color-secondary-light;
-}
-
-.form-container p {
-  font: $font-handwriting;
-  margin-bottom: 40px;
-}
-
-.contact-form label {
-  @extend %font-p;
-}
-
-.contact-form textarea:focus,
-.contact-form input:focus {
-  border-radius: 0px;
-  border-color: $color-secondary-light;
-  border-width: 2px;
-  outline: none;
-}
-
-.contact-form input,
-.contact-form textarea {
-  @extend %font-p;
-  margin-top: 5px;
+  font-size: 40px;
   margin-bottom: 30px;
-  border: none;
-  border-bottom: $border-box;
-  background-color: transparent;
-  width: 100%;
-  height: 40px;
-  padding: 10px;
-
-  @media (max-width: $media-query2) {
-    margin-bottom: 15px;
-    background-color: transparent;
-    width: 100%;
-    padding: 10px;
-  }
+  text-shadow: $text-shadow;
 }
 
-.contact-form textarea {
-  height: 12rem;
-  line-height: 1.5rem;
-  resize: none;
+/* About - Career path */
+
+section.education{
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#btn-submit {
-  margin-top: 15px;
-  background-color: $color-secondary-light;
-  width: 100%;
-  border: $border-box;
-  padding: 10px;
-  font: var(--font-p-bold);
-  line-height: 0.95;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+.path{
+  display:flex;
+  flex-direction: column;
+  width:40%;
+  margin-top: $margin-phone;
+  margin-right: 50px;
+  margin-left: 50px;
+}
 
-  @media (max-width: $media-query2) {
-    margin-top: 15px;
-    background-color: $color-secondary-light;
-    width: 100%;
-    border: $border-box;
-    padding: 10px;
-    line-height: 0.95;
-  }
+.txt-container-path h3{
+  text-align: center;
+  text-shadow: $text-shadow;
+  margin-bottom: 30px;
+}
+
+.project-description-path{
+text-align: center;
+  margin-bottom: 30px;
+}
+
+.path .roles{
+display: flex;
+justify-content: center;
+}
+
+.path-image {
+  width:100%;
+  height:200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.path-image.ux{
+  background-image: url("../assets/images/About/1.png");
+}
+
+.path-image.e-commerce{
+  background-image: url("../assets/images/About/2.png");
+}
+
+.path-image.web-development{
+  background-image: url("../assets/images/About/3.png");
+}
+
+.path-image.architecture{
+  background-image: url("../assets/images/About/4.png");
 }

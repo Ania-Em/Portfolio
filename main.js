@@ -2,6 +2,8 @@ function playmenu() {
   var audio = new Audio("http://www.soundjay.com/switch/sounds/switch-13.mp3");
   audio.play();
 }
+
+// Gallery
 class ImagesSlides{
   constructor(numberOfSlides, numberOfProject){
   this.numberOfSlides = numberOfSlides;
@@ -135,3 +137,23 @@ projectGallery4.arrowPrevious.addEventListener("click", function () {
   sliderActive4.classList.add("slide-active");
 });
 
+//Onscroll - animation 
+
+const images = document.querySelectorAll('.anim');
+
+observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        if(entry.intersectionRatio > 0) {
+            entry.target.style.animation = `anim1 1s ${entry.target.dataset.delay} forwards ease-out`;
+        }
+        else {
+            entry.target.style.animation = 'none';
+        }
+    })
+
+})
+
+images.forEach(image => {
+    observer.observe(image)
+})

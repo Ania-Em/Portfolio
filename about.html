@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <title> Anna Marszałek-Portfolio UX/UI</title>
-      <meta name="description" content="Portfolio | Ania Marszałek | UX/UI Design">
-      <meta name="keywords" content="portfolio, ux design, web design, ui design">
-      <link rel="stylesheet" href="./styles/style.css">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@400;500;700&display=swap"
-          rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="icono.min.css">
-  </head>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title> Anna Marszałek-Portfolio UX/UI</title>
+   <meta name="description" content="Portfolio | Ania Marszałek | UX/UI Design">
+   <meta name="keywords" content="portfolio, ux design, web design, ui design">
+   <link rel="stylesheet" href="./styles/style.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="icono.min.css">
+</head>
 
 <body>
-   <script src="/main.js"></script>
    <header>
       <nav class="navbar">
          <a href="index.html">
@@ -30,62 +29,134 @@
       </nav>
    </header>
    <section class="landing landing-about">
-      
       <div class="profilephoto-container">
-         <img class="profilephoto" src="./assets/images/profile.jpg" alt="profile-photo">
+         <div class="profilephoto anim" data-delay="0s" alt="profile-photo">
+         </div>
          <div class="profile-description">
-            <p>Ania Marszałek</p>
-            <p>Hi, I’m Ania. I came to web design from a background in Architecture, which gave me a strong understanding of design, project-oriented work-environment and a real interest in analysing human behaviours. I was driven to design because I felt excited and rewarding to learn about people’s goals and desires, help them solve problems and make their lives easier with technology and design.
+            <p class ="anim" data-delay="0.5s">Ania Marszałek</p>
+            <p class ="anim" data-delay="1s">Hi, I’m Ania. I came to web design from a background in Architecture, which gave me a strong
+               understanding of design, project-oriented work-environment and a real interest in analysing human
+               behaviours. I was driven to design because I felt excited and rewarding to learn about people’s goals and
+               desires, help them solve problems and make their lives easier with technology and design.
             </p>
          </div>
       </div>
    </section>
-   <section id="contact" class="contact">
-      <div class="banner">
-         <h2>CONTACT ME</h2>
-      </div>
-      <div class="form-container">
-         <p>Hi there!</p>
-         <form class=contact-form>
-            <label for="name">Your name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Your e-mail:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">What’s your message?</label><br>
-            <textarea name="message" rows="7" cols="45"></textarea><br>
-            <input id="btn-submit" type="submit" value="Get in touch">
-         </form>
-      </div>
+   <div class="banner anim"  data-delay="0s">
+      <h1>MY BACKGROUND</h1>
+   </div>
+   <section class="education">
+      <article class="path ux anim" data-delay="0.2s">
+         <div class="path-container">
+            <div class="path-image ux"></div>
+         </div>
+         <div class="description-container-path">
+            <div class="txt-container-path">
+               <h3>UX/UI</h3>
+               <P class="project-description-path">Self tought, reading books, articles, abserving newest trends.</P>
+            </div>
+            <div class="roles">
+               <div class="role">Paper prototyping</div>
+               <div class="role">Wireframes (Low and high fidelity) - Figma</div>
+               <div class="role">Graphic design</div>
+               <div class="role">Indesign, Photoshop, Illustrator</div>
+               <div class="role">Usability tests</div>
+               <div class="role">In-depth interviews</div>
+               <div class="role">Personas, customer journey map</div>               
+            </div>
+         </div>
+         </div>
+      </article>
+     
+      <article class="path web-development anim" data-delay="0.4s">
+         <div class="path-container">
+            <div class="path-image web-development"></div>
+         </div>
+         <div class="description-container-path">
+            <div class="txt-container-path">
+               <h3>WEB-DEVELOPMENT</h3>
+               <P class="project-description-path">CodersCamp - mentoring programme for front-end developers. </P>
+            </div>
+            <div class="roles">
+               <div class="role">SCRUM framework</div>
+               <div class="role">Team work</div>
+               <div class="role">HTML</div>
+               <div class="role">CSS, SCSS</div>
+               <div class="role">Javascript</div>
+               <div class="role">Typescript</div>
+               <div class="role">Github</div>
+               <div class="role">Kanban board</div>
+            </div>
+         </div>
+         </div>
+      </article> 
+      <article class="path e-commerce anim" data-delay="0.4s">
+         <div class="path-container">
+            <div class="path-image e-commerce"></div>
+         </div>
+         <div class="description-container-path">
+            <div class="txt-container-path">
+               <h3>E-COMMERCE</h3>
+               <P class="project-description-path">Post graduate studies - E-commerce project management</P>
+            </div>
+            <div class="roles">
+               <div class="role">Google analytics</div><br>
+               <div class="role">Brand identity</div>
+               <div class="role">Usability</div>
+               <div class="role">Marketing strategy</div>
+               <div class="role">SEO</div>
+            </div>
+         </div>
+         </div>
+      </article>
+      <article class="path architecture anim" data-delay="0.8s">
+         <div class="path-container">
+            <div class="path-image architecture"></div>
+         </div>
+         <div class="description-container-path">
+            <div class="txt-container-path">
+               <h3>ARCHITECTURE</h3>
+               <P class="project-description-path">Master degree in Architecture. <br>2 years of professional experience. </P>
+            </div>
+            <div class="roles">
+               <div class="role">Project-oriented</div>
+               <div class="role">Design</div>
+               <div class="role">Project coordination</div>
+               <div class="role">Team work</div>
+               <div class="role">Communication with clients</div>
+            </div>
+         </div>
+         </div>
+      </article>
    </section>
    <footer>
       <div class="footer-text">
-          <div class="personal-info footer-container">
-              <div class="author footer-tile">
-                  <p>Author:</p>
-                  <p>Anna Marszałek</p>
-              </div>
-              <div class="localisation footer-tile">
-                  <p>Location:</p>
-                  <p>Wrocław, Poland</p>
-              </div>
-          </div>
-          <div class="contact footer-container">
-              <div class="linkedin footer-tile">
-                  <p>Linkedin:</p>
-                  <p><a href="https://www.linkedin.com/in/annammarszałek/">linkedin.com/in/annammarszałek</a></p>
-              </div>
-              <div class="email footer-tile">
-                  <p>E-mail:</p>
-                  <p>aniammarszalek@gmail.com</p>
-              </div>
-          </div>
-          <div class="thanks">
-              <p>Thanks for <br>stopping by <i class="material-icons favourite">favorite</i></p>
-          </div>
+         <div class="personal-info footer-container">
+            <div class="author footer-tile">
+               <p>Author:</p>
+               <p>Anna Marszałek</p>
+            </div>
+            <div class="localisation footer-tile">
+               <p>Location:</p>
+               <p>Wrocław, Poland</p>
+            </div>
+         </div>
+         <div class="contact footer-container">
+            <div class="linkedin footer-tile">
+               <p>Linkedin:</p>
+               <p><a href="https://www.linkedin.com/in/annammarszałek/">linkedin.com/in/annammarszałek</a></p>
+            </div>
+            <div class="email footer-tile">
+               <p>E-mail:</p>
+               <p>aniammarszalek@gmail.com</p>
+            </div>
+         </div>
+         <div class="thanks">
+            <p>Thanks for <br>stopping by <i class="material-icons favourite">favorite</i></p>
+         </div>
       </div>
-  </footer>
-  <script>
-  </script>
+   </footer>
+   <script src="about.js"></script>
 </body>
 
 </html>
