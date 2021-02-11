@@ -133,6 +133,9 @@ projectGallery4.arrowPrevious.addEventListener("click", function () {
   sliderActive4Previous.classList.remove("slide-active");
   sliderActive4 = document.querySelector(`.project${projectGallery4.numberOfProject} .dot${projectGallery4.firstNumber}`);
   sliderActive4.classList.add("slide-active");
+
+
+  
 });
 }
 
@@ -210,7 +213,7 @@ projectGalleryOthers2.arrowPrevious.addEventListener("click", function () {
 
 //Photos
 
-const projectGalleryOthers3= new ImagesSlidesOthers(8,3);
+const projectGalleryOthers3= new ImagesSlidesOthers(9,3);
 
 projectGalleryOthers3.arrowNext.addEventListener("click", function () {
   if (projectGalleryOthers3.firstNumber === projectGalleryOthers3.numberOfSlides){
