@@ -654,6 +654,10 @@ article.project {
   height: 100%;
   position:relative;
   flex-wrap:wrap;
+
+  @media (max-width: $media-query1){
+    justify-content: center; 
+  }
 }
 
 .project-container {
@@ -682,7 +686,7 @@ article.project {
   margin-right: 40px;
 
   @media (max-width: $media-query1) {
-    height: 100%;
+    min-height: 100%;
     width: 90vw;
     height: 300px;
     margin-right: 0;
@@ -713,8 +717,12 @@ article.project {
   display: flex;
   position: absolute;
   bottom: -30px;
-  left: 50%;
+  left: calc(50% - 20px);
   transform: translate(-50%, -50%);
+
+  @media (max-width: $media-query1) {
+    left: 50%;
+  }
 }
 
 .dot {
@@ -738,8 +746,9 @@ article.project {
   min-height: 500px;
 
   @media (max-width: $media-query1) {
-    width: 100%;
+    min-width: 450px;
     align-items: center;
+    min-height:100%;
   }
 
   @media (max-width: $media-query2) {
@@ -817,8 +826,11 @@ p.project-description {
 
   @media (max-width: $media-query1) {
     margin-top: 20px;
-    max-width: 400px;
+    max-width: 450px;
     align-self: center;
+  }
+  @media (max-width: $media-query2) {
+    width:100%;
   }
 }
 
@@ -901,7 +913,8 @@ section.projects-others .image-container {
 
   @media (max-width: $media-query1) {
     margin-right: 0;
-    width: 100%;
+    width: 90vw;
+    height:90vw;
   }
 }
 

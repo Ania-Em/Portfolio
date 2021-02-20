@@ -880,6 +880,14 @@ article.project {
       flex-wrap: wrap;
 }
 
+@media (max-width: 1000px) {
+  article.project {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .project-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,7 +928,7 @@ article.project {
 
 @media (max-width: 1000px) {
   .project-image {
-    height: 100%;
+    min-height: 100%;
     width: 90vw;
     height: 300px;
     margin-right: 0;
@@ -950,9 +958,15 @@ article.project {
   display: flex;
   position: absolute;
   bottom: -30px;
-  left: 50%;
+  left: calc(50% - 20px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1000px) {
+  .slider {
+    left: 50%;
+  }
 }
 
 .dot {
@@ -985,10 +999,11 @@ article.project {
 
 @media (max-width: 1000px) {
   .description-container {
-    width: 100%;
+    min-width: 450px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    min-height: 100%;
   }
 }
 
@@ -1093,10 +1108,16 @@ p.project-description {
 @media (max-width: 1000px) {
   .link-toproject {
     margin-top: 20px;
-    max-width: 400px;
+    max-width: 450px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .link-toproject {
+    width: 100%;
   }
 }
 
@@ -1199,7 +1220,8 @@ section.projects-others .image-container {
 @media (max-width: 1000px) {
   section.projects-others .image-container {
     margin-right: 0;
-    width: 100%;
+    width: 90vw;
+    height: 90vw;
   }
 }
 
