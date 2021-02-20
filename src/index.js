@@ -1,4 +1,3 @@
-//Animation-on scroll
 
 const images = document.querySelectorAll('.anim');
 
@@ -18,3 +17,6 @@ observer = new IntersectionObserver((entries) => {
 images.forEach(image => {
     observer.observe(image)
 })
+
+
+
