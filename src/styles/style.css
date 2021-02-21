@@ -147,7 +147,7 @@ footer .footer-tile p:last-child, footer a, .link-toproject p {
 
 body {
   width: 100%;
-  background-image: radial-gradient(#c4f8e6 7%, #fbf7f4 7%);
+  background-image: radial-gradient(#C1E8DB 7%, #fbf7f4 7%);
   background-attachment: fixed;
   background-position: 0 0;
   background-size: 20px 20px;
@@ -156,7 +156,7 @@ body {
 @media (max-width: 550px) {
   body {
     background-size: 15px 15px;
-    background-image: radial-gradient(#c4f8e6 10%, #fbf7f4 10%);
+    background-image: radial-gradient(#C1E8DB 10%, #fbf7f4 10%);
   }
 }
 
@@ -221,11 +221,11 @@ header {
 
 /* Header - Logo */
 .navbar .logo {
-  height: 60px;
+  height: 40px;
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  text-shadow: 3px 3px 0px #c4f8e6;
+  text-shadow: 3px 3px 0px #C1E8DB;
 }
 
 @media (max-width: 550px) {
@@ -305,7 +305,7 @@ ul.menu a::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c4f8e6;
+  background-color: #C1E8DB;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -328,7 +328,7 @@ ul.menu li:first-child a {
 }
 
 ul.menu li.current a {
-  text-shadow: 3px 3px 0px #c4f8e6;
+  text-shadow: 3px 3px 0px #C1E8DB;
 }
 
 /* Landing  */
@@ -367,7 +367,7 @@ section.landing {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
+    height: 90vh;
     width: 100vw;
     padding: 0px;
   }
@@ -395,12 +395,14 @@ footer {
 @media (max-width: 1000px) {
   footer {
     margin-top: 125px;
+    width: 100%;
   }
 }
 
 @media (max-width: 550px) {
   footer {
     margin-top: 75px;
+    width: 100%;
   }
 }
 
@@ -410,7 +412,7 @@ footer::before {
   width: 100%;
   display: block;
   z-index: 2;
-  background-color: #c4f8e6;
+  background-color: #C1E8DB;
   position: relative;
   top: -20px;
 }
@@ -504,6 +506,10 @@ footer .footer-tile {
 
 footer .footer-tile p:last-child {
   margin-top: 10px;
+}
+
+footer p {
+  text-align: center;
 }
 
 /* Footer - thanks */
@@ -625,7 +631,7 @@ section.landing .email {
 
 .welcome-box {
   border: 1px solid #0f6565;
-  outline: solid 10px #c4f8e6;
+  outline: solid 10px #C1E8DB;
   outline-offset: 25px;
   padding: 50px;
   padding-top: 60px;
@@ -648,7 +654,7 @@ section.landing .email {
 
 @media (max-width: 550px) {
   .welcome-box {
-    outline: solid 5px #c4f8e6;
+    outline: solid 5px #C1E8DB;
     outline-offset: 10px;
     padding: 10px;
     padding-top: 20px;
@@ -915,6 +921,13 @@ article.project {
   }
 }
 
+@media (max-width: 550px) {
+  .project-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .project-image {
   background-position: center;
   background-size: contain;
@@ -924,6 +937,15 @@ article.project {
   -webkit-transition: 1000ms steps(7, end);
   transition: 1000ms steps(7, end);
   margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1000px) {
@@ -932,6 +954,15 @@ article.project {
     width: 90vw;
     height: 300px;
     margin-right: 0;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+  .project-image {
+    width: 90vw;
+    max-height: 90vh;
+    padding: 7px;
   }
 }
 
@@ -951,6 +982,55 @@ article.project {
   background-image: url("../static/assets/images/4/1.png");
 }
 
+.gif {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 8% 8%;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 550px) {
+  .gif {
+    margin: 3% 7%;
+  }
+}
+
+.gif1 {
+  background-image: url("../static/assets/images/1/1.gif");
+}
+
+.gif2 {
+  background-image: url("../static/assets/images/2/1.gif");
+}
+
+.gif3 {
+  background-image: url("../static/assets/images/3/1.gif");
+}
+
+.gif3 {
+  background-image: url("../static/assets/images/4/1.gif");
+}
+
+@-webkit-keyframes progressBar {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
 .slider {
   margin: 0 auto;
   display: -webkit-box;
@@ -961,6 +1041,11 @@ article.project {
   left: calc(50% - 20px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  height: 10px;
+  width: 30px;
+  margin: 10px 5px 0px 5px;
+  background-color: #C1E8DB;
+  border: 1px solid #0f6565;
 }
 
 @media (max-width: 1000px) {
@@ -969,16 +1054,19 @@ article.project {
   }
 }
 
-.dot {
-  height: 10px;
-  width: 10px;
-  margin: 10px 5px 0px 5px;
-  background-color: #fbf7f4;
-  border: 1px solid #0f6565;
+.slider1 {
+  -webkit-animation: progressBar 13.5s ease-in-out infinite alternate forwards;
+          animation: progressBar 13.5s ease-in-out infinite alternate forwards;
 }
 
-.slide-active {
-  background-color: #c4f8e6;
+.slider2 {
+  -webkit-animation: progressBar 18s ease-in-out infinite alternate forwards;
+          animation: progressBar 18s ease-in-out infinite alternate forwards;
+}
+
+.slider3 {
+  -webkit-animation: progressBar 4.5s ease-in-out infinite alternate forwards;
+          animation: progressBar 4.5s ease-in-out infinite alternate forwards;
 }
 
 /* Project- text */
@@ -1009,7 +1097,7 @@ article.project {
 
 @media (max-width: 550px) {
   .description-container {
-    width: 100%;
+    min-width: 100%;
     margin-top: 40px;
   }
 }
@@ -1026,7 +1114,7 @@ article.project {
 
 .txt-container h3 {
   margin-bottom: 10px;
-  text-shadow: 3px 3px 0px #c4f8e6;
+  text-shadow: 3px 3px 0px #C1E8DB;
 }
 
 @media (max-width: 1000px) {
@@ -1035,6 +1123,12 @@ article.project {
     margin-bottom: 20px;
     margin-top: 35px;
     text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .txt-container h3 {
+    margin-top: 0px;
   }
 }
 
@@ -1062,7 +1156,7 @@ p.project-description {
 
 .role {
   color: #0f6565;
-  border: 2px solid #c4f8e6;
+  border: 2px solid #C1E8DB;
   margin-bottom: 10px;
   padding: 0px 15px;
   height: 35px;
@@ -1076,6 +1170,7 @@ p.project-description {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .link-toproject {
@@ -1129,7 +1224,7 @@ p.project-description {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c4f8e6;
+  background-color: #C1E8DB;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -1230,7 +1325,6 @@ section.projects-others .project-image {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0 20px;
   height: 100%;
   width: 100%;
   -webkit-transition: 1000ms steps(7, end);
@@ -1238,15 +1332,15 @@ section.projects-others .project-image {
 }
 
 .projectOthers1 .project-image {
-  background-image: url("../static/assets/images/Others1/1.jpg");
+  background-image: url("../static/assets/images/Others1/1.gif");
 }
 
 .projectOthers2 .project-image {
-  background-image: url("../static/assets/images/Others2/1.jpg");
+  background-image: url("../static/assets/images/Others2/1.gif");
 }
 
 .projectOthers3 .project-image {
-  background-image: url("../static/assets/images/Others3/1.jpg");
+  background-image: url("../static/assets/images/Others3/1.gif");
 }
 
 /* About - landing */
@@ -1276,8 +1370,9 @@ section.projects-others .project-image {
 
 @media (max-width: 550px) {
   .profilephoto-container {
-    padding: 30px;
+    padding: 20px;
     width: 100%;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1304,7 +1399,7 @@ section.projects-others .project-image {
 @media (max-width: 550px) {
   .profilephoto {
     width: 200px;
-    height: 250px;
+    height: 60vh;
   }
 }
 
@@ -1347,6 +1442,7 @@ section.projects-others .project-image {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 0;
+    width: 100%;
   }
 }
 
@@ -1354,7 +1450,17 @@ section.projects-others .project-image {
   font: 400 30px "Caveat", cursive;
   font-size: 40px;
   margin-bottom: 30px;
-  text-shadow: 3px 3px 0px #c4f8e6;
+  text-shadow: 3px 3px 0px #C1E8DB;
+}
+
+@media (max-width: 550px) {
+  .profile-description p:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+.profile-description p:last-child {
+  text-align: center;
 }
 
 /* About - Career path */
@@ -1389,14 +1495,14 @@ section.education {
 @media (max-width: 1000px) {
   .path {
     width: 70vw;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
 .txt-container-path h3 {
   text-align: center;
-  text-shadow: 3px 3px 0px #c4f8e6;
+  text-shadow: 3px 3px 0px #C1E8DB;
   margin-bottom: 30px;
 }
 
