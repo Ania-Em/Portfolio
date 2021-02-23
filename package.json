@@ -25,10 +25,6 @@
     "type": "git",
     "url": "git+https://github.com/Ania-Em/Portfolio.git"
   },
-  "staticFiles": {
-    "staticPath": "./src/static/assets/images/",
-    "staticOutDir": "static"
-  },
   "author": "Anna Marszałek",
   "license": "ISC",
   "bugs": {

@@ -11,7 +11,7 @@
 //Colors
 $color-background: #fbf7f4;
 $color-main-dark: #0f6565;
-$color-secondary-light: #C1E8DB;
+$color-secondary-light: #c1e8db;
 $color-secondary-dark: #0f6565;
 $color-tertiary: #b64f2e;
 
@@ -21,7 +21,7 @@ $media-query2: 550px;
 
 //Common
 %margin-tiles {
-  margin-top: 70px;
+  margin-top: 80px;
   @media (max-width: $media-query1) and (min-width: $media-query2) {
     margin-top: 40px;
   }
@@ -31,7 +31,7 @@ $media-query2: 550px;
 }
 
 %margin-tiles-line {
-  margin-top: 150px;
+  margin-top: 160px;
   @media (max-width: $media-query1) and (min-width: $media-query2) {
     margin-top: 85px;
   }
@@ -129,18 +129,18 @@ $font-handwriting: 400 30px "Caveat", cursive;
 body {
   width: 100%;
   background-image: radial-gradient(
-    $color-secondary-light 7%,
-    $color-background 7%
+    $color-secondary-light 6%,
+    $color-background 6%
   );
   background-attachment: fixed;
   background-position: 0 0;
-  background-size: 20px 20px;
+  background-size: 25px 25px;
 
   @media (max-width: $media-query2) {
-    background-size: 15px 15px;
+    background-size: 20px 20px;
     background-image: radial-gradient(
-      $color-secondary-light 10%,
-      $color-background 10%
+      $color-secondary-light 8%,
+      $color-background 8%
     );
   }
 }
@@ -213,7 +213,7 @@ header {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   text-shadow: $text-shadow;
-  
+
   @media (max-width: $media-query2) {
     margin-top: 5px;
     height: 25px;
@@ -333,11 +333,11 @@ footer {
 
   @media (max-width: $media-query1) {
     margin-top: $margin-tablet;
-    width:100%;
+    width: 100%;
   }
   @media (max-width: $media-query2) {
     margin-top: $margin-phone;
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -381,7 +381,6 @@ footer::before {
   @media (max-width: $media-query1) {
     padding-left: none;
     width: 35vw;
-    
   }
   @media (max-width: $media-query2) {
     align-items: center;
@@ -409,7 +408,9 @@ footer a {
 }
 
 footer p {
-  text-align: center;
+  @media (max-width: $media-query2){
+   text-align: center; 
+  }
 }
 
 /* Footer - thanks */
@@ -656,15 +657,15 @@ section.projects {
 //Each project
 
 article.project {
- @extend %margin-tiles;
+  @extend %margin-tiles;
   display: flex;
   width: 100%;
   height: 100%;
-  position:relative;
-  flex-wrap:wrap;
+  position: relative;
+  flex-wrap: wrap;
 
-  @media (max-width: $media-query1){
-    justify-content: center; 
+  @media (max-width: $media-query1) {
+    justify-content: center;
   }
 }
 
@@ -672,7 +673,7 @@ article.project {
   display: flex;
   width: 70%;
   height: 100%;
-  position:relative;
+  position: relative;
 
   @media (max-width: $media-query1) {
     display: flex;
@@ -680,7 +681,7 @@ article.project {
     align-items: center;
     width: fit-content;
   }
-  @media (max-width: $media-query2){
+  @media (max-width: $media-query2) {
     width: 100%;
     height: 100%;
   }
@@ -696,7 +697,7 @@ article.project {
   width: 100%;
   transition: 1000ms steps(7, end);
   margin-right: 40px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -708,9 +709,9 @@ article.project {
     padding: 18px;
   }
 
-  @media (max-width: $media-query2){
-    width:90vw;
-    max-height:90vh;
+  @media (max-width: $media-query2) {
+    width: 90vw;
+    max-height: 90vh;
     padding: 7px;
   }
 }
@@ -721,6 +722,11 @@ article.project {
 
 .project2 .project-image {
   background-image: url("../static/assets/images/2/1.png");
+  padding: 50px 0px;
+
+  @media (max-width: $media-query1){
+    padding: 35px;
+  }
 }
 
 .project3 .project-image {
@@ -729,45 +735,57 @@ article.project {
 
 .project4 .project-image {
   background-image: url("../static/assets/images/4/1.png");
+  padding: 50px 0px;
+
+  @media (max-width: $media-query1){
+    padding: 35px;
+  }
 }
 
 //Gif
 
-.gif{
+.gif {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 8% 8%;
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
+}
 
-  @media (max-width: $media-query2){
-    margin:3% 7%;
+.gif1,
+.gif3 {
+  margin: 8% 9%;
+
+  @media (max-width: $media-query2) {
+    margin: 3% 7%;
   }
 }
 
-.gif1{
- background-image: url("../static/assets/images/1/1.gif");
+.gif1 {
+  background-image: url("../static/assets/images/1/1.gif");
 }
-.gif2{
+.gif2 {
   background-image: url("../static/assets/images/2/1.gif");
- }
- .gif3{
+}
+.gif3 {
   background-image: url("../static/assets/images/3/1.gif");
- }
- .gif3{
+}
+.gif4 {
   background-image: url("../static/assets/images/4/1.gif");
- }
-
+}
 
 //Slider
 
 @keyframes progressBar {
-  0% { width: 10px; }
-  100% { width: 300px; }
+  0% {
+    width: 10px;
+  }
+  100% {
+    width: 300px;
+  }
 }
 
-.slider  {
+.slider {
   margin: 0 auto;
   display: flex;
   position: absolute;
@@ -779,27 +797,27 @@ article.project {
   margin: 10px 5px 0px 5px;
   background-color: $color-secondary-light;
   border: 1px solid $color-secondary-dark;
-  
+
   @media (max-width: $media-query1) {
     left: 50%;
   }
 }
 
-.slider1{
+.slider1 {
   animation: progressBar 13.5s ease-in-out infinite alternate forwards;
 }
 
-.slider2{
+.slider2 {
   animation: progressBar 18s ease-in-out infinite alternate forwards;
 }
 
-.slider3{
+.slider3 {
   animation: progressBar 4.5s ease-in-out infinite alternate forwards;
 }
 
 /* Project- text */
 
- .description-container {
+.description-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -809,7 +827,7 @@ article.project {
   @media (max-width: $media-query1) {
     min-width: 450px;
     align-items: center;
-    min-height:100%;
+    min-height: 100%;
   }
 
   @media (max-width: $media-query2) {
@@ -833,9 +851,9 @@ article.project {
     margin-top: 35px;
     text-align: center;
   }
-@media (max-width: $media-query2){
-  margin-top: 0px;
-}
+  @media (max-width: $media-query2) {
+    margin-top: 0px;
+  }
 }
 
 p.project-description {
@@ -896,7 +914,7 @@ p.project-description {
     align-self: center;
   }
   @media (max-width: $media-query2) {
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -980,7 +998,7 @@ section.projects-others .image-container {
   @media (max-width: $media-query1) {
     margin-right: 0;
     width: 90vw;
-    height:90vw;
+    height: 90vw;
   }
 }
 
@@ -1030,7 +1048,7 @@ section.projects-others .project-image {
   @media (max-width: $media-query2) {
     padding: 20px;
     width: 100%;
-    height:100%;
+    height: 100%;
     flex-direction: column;
   }
 }
@@ -1063,7 +1081,6 @@ section.projects-others .project-image {
 
   @media (max-width: $media-query1) {
     flex-direction: column;
-    align-items: center;
     margin-left: 0;
     margin-top: 15px;
     margin-left: 20px;
@@ -1073,7 +1090,7 @@ section.projects-others .project-image {
     flex-direction: column;
     align-items: center;
     margin-left: 0;
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -1083,13 +1100,16 @@ section.projects-others .project-image {
   margin-bottom: 30px;
   text-shadow: $text-shadow;
 
-  @media (max-width: $media-query2){
+  @media (max-width: $media-query2) {
     margin-bottom: 15px;
   }
 }
 
-.profile-description p:last-child{
-  text-align: center;
+.profile-description p:last-child {
+
+  @media (max-width: $media-query2){
+    text-align: center; 
+  }
 }
 
 /* About - Career path */
