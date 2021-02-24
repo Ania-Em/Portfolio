@@ -31,5 +31,9 @@
     "url": "https://github.com/Ania-Em/Portfolio/issues"
   },
   "homepage": "https://github.com/Ania-Em/Portfolio#readme",
-  "assetsPath": "./src/static/assets/images"
+  "staticFiles": {
+    "staticPath":  {
+            "staticPath": "./src/static",
+            "staticOutDir": "static"
+        }}
 }

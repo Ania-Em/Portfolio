@@ -9,7 +9,7 @@
 
 /* Main style */
 article.project, section.projects-others .image-container, .projects-others .banner {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 @media (max-width: 1000px) and (min-width: 550px) {
@@ -27,7 +27,7 @@ article.project, section.projects-others .image-container, .projects-others .ban
 article.project1::after,
 article.project2::after,
 article.project3::after {
-  margin-top: 150px;
+  margin-top: 160px;
 }
 
 @media (max-width: 1000px) and (min-width: 550px) {
@@ -147,16 +147,16 @@ footer .footer-tile p:last-child, footer a, .link-toproject p {
 
 body {
   width: 100%;
-  background-image: radial-gradient(#c1e8db 7%, #fbf7f4 7%);
+  background-image: radial-gradient(#c1e8db 6%, #fbf7f4 6%);
   background-attachment: fixed;
   background-position: 0 0;
-  background-size: 20px 20px;
+  background-size: 25px 25px;
 }
 
 @media (max-width: 550px) {
   body {
-    background-size: 15px 15px;
-    background-image: radial-gradient(#c1e8db 10%, #fbf7f4 10%);
+    background-size: 20px 20px;
+    background-image: radial-gradient(#c1e8db 8%, #fbf7f4 8%);
   }
 }
 
@@ -508,8 +508,10 @@ footer .footer-tile p:last-child {
   margin-top: 10px;
 }
 
-footer p {
-  text-align: center;
+@media (max-width: 550px) {
+  footer p {
+    text-align: center;
+  }
 }
 
 /* Footer - thanks */
