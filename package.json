@@ -33,7 +33,7 @@
   "homepage": "https://github.com/Ania-Em/Portfolio#readme",
   "staticFiles": {
     "staticPath":  {
-            "staticPath": "./src/static",
+            "staticPath": "./src/static/assets",
             "staticOutDir": "static"
         }}
 }

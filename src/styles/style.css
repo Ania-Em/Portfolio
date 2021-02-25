@@ -93,11 +93,13 @@ h4 {
 p {
   color: #0f6565;
   font: 300 18px "Quicksand", sans-serif;
+  line-height: 1.5;
 }
 
 @media (max-width: 550px) {
   p {
     font: 300 16px "Quicksand", sans-serif;
+    line-height: 1.5;
   }
 }
 
@@ -115,6 +117,7 @@ ul.menu a {
 .link-toproject {
   color: #0f6565;
   font: 300 18px "Quicksand", sans-serif;
+  line-height: 1.5em;
 }
 
 @media (max-width: 550px) {
@@ -156,7 +159,7 @@ body {
 @media (max-width: 550px) {
   body {
     background-size: 20px 20px;
-    background-image: radial-gradient(#c1e8db 8%, #fbf7f4 8%);
+    background-image: radial-gradient(#c1e8db 6%, #fbf7f4 6%);
   }
 }
 
@@ -207,6 +210,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  z-index: 5;
 }
 
 @media (max-width: 550px) {
@@ -226,6 +230,7 @@ header {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   text-shadow: 3px 3px 0px #c1e8db;
+  z-index: 5;
 }
 
 @media (max-width: 550px) {
@@ -275,13 +280,11 @@ ul.menu a {
   padding: 10px 20px;
   margin-left: 2.5vw;
   color: #0f6565;
-  border: 1px solid #0f6565;
   position: relative;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-transition: all 1200ms;
   transition: all 1200ms;
-  background-color: #fbf7f4;
 }
 
 @media (max-width: 1000px) and (min-width: 550px) {
@@ -305,7 +308,6 @@ ul.menu a::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #c1e8db;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -316,6 +318,7 @@ ul.menu a::before {
   transition-property: transform, -webkit-transform;
   -webkit-transition: 500ms ease-in;
   transition: 500ms ease-in;
+  border: 1px solid #0f6565;
 }
 
 ul.menu a:hover::before {
@@ -388,20 +391,20 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 225px;
+  margin-top: 240px;
   padding-bottom: 30px;
 }
 
 @media (max-width: 1000px) {
   footer {
-    margin-top: 125px;
+    margin-top: 120px;
     width: 100%;
   }
 }
 
 @media (max-width: 550px) {
   footer {
-    margin-top: 75px;
+    margin-top: 70px;
     width: 100%;
   }
 }
@@ -634,11 +637,11 @@ section.landing .email {
 .welcome-box {
   border: 1px solid #0f6565;
   outline: solid 10px #c1e8db;
-  outline-offset: 25px;
-  padding: 50px;
-  padding-top: 60px;
-  width: 375px;
-  height: 375px;
+  outline-offset: 20px;
+  padding: 40px;
+  padding-top: 50px;
+  width: 325px;
+  height: 325px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,7 +703,7 @@ section.landing .email {
 
 .welcome-box .hello {
   font: 400 50px "Caveat", cursive;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 550px) {
@@ -724,6 +727,7 @@ section.landing .email {
 .aboutme > p {
   white-space: nowrap;
   overflow: hidden;
+  text-align: center;
 }
 
 .aboutme p:nth-child(1) {
@@ -1123,7 +1127,7 @@ article.project {
   }
 }
 
-.project-container .description-container .txt-container {
+.txt-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,7 +1138,7 @@ article.project {
 }
 
 .txt-container h3 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-shadow: 3px 3px 0px #c1e8db;
 }
 
@@ -1163,6 +1167,12 @@ p.project-description {
   }
 }
 
+@media (max-width: 550px) {
+  p.project-description {
+    line-height: 1.5;
+  }
+}
+
 .roles {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1177,7 +1187,7 @@ p.project-description {
 
 .role {
   color: #0f6565;
-  border: 2px solid #c1e8db;
+  border: 1px solid #c1e8db;
   margin-bottom: 10px;
   padding: 0px 15px;
   height: 35px;
@@ -1288,18 +1298,18 @@ article.project3::after {
 }
 
 article.project1 {
-  margin-top: 225px;
+  margin-top: 240px;
 }
 
 @media (max-width: 1000px) {
   article.project1 {
-    margin-top: 125px;
+    margin-top: 120px;
   }
 }
 
 @media (max-width: 550px) {
   article.project1 {
-    margin-top: 75px;
+    margin-top: 70px;
   }
 }
 
@@ -1507,7 +1517,7 @@ section.education {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
-  margin-top: 75px;
+  margin-top: 70px;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -1563,5 +1573,229 @@ section.education {
 
 .path-image.architecture {
   background-image: url("../static/assets/images/About/4.png");
+}
+
+.background-landing {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.boho-landing {
+  background-image: url("../static/assets/images/1/2.png");
+}
+
+.project-wrapper {
+  max-width: 1200px;
+  background: #fbf7f4;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 40px;
+}
+
+@media (max-width: 550px) {
+  .project-wrapper {
+    padding: 0 20px;
+  }
+}
+
+.project-wrapper .banner h3 {
+  margin: 0 6vw;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-wrapper article {
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+
+.project-wrapper article .article-description {
+  max-width: 500px;
+}
+
+.whathowwhenwhy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .whathowwhenwhy {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.whathowwhenwhy .link-toproject {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .whathowwhenwhy .link-toproject {
+    width: 100%;
+  }
+}
+
+.what-container {
+  width: 21%;
+  padding: 10px;
+  margin: 10px 10px;
+}
+
+.what-container :first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .what-container {
+    width: 100%;
+  }
+}
+
+.persona {
+  border: 1px solid #0f6565;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1000px) {
+  .persona {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .persona {
+    padding: 15px;
+  }
+}
+
+.persona p {
+  font-size: 15px;
+}
+
+.persona h4 {
+  font-size: 18px;
+}
+
+.persona .persona-about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 750px) {
+  .persona .persona-about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .persona .persona-about p {
+    text-align: left;
+  }
+}
+
+.persona .persona-about .persona-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+
+.persona .persona-about .persona-about-txt {
+  width: calc(97% - 200px);
+}
+
+@media (max-width: 750px) {
+  .persona .persona-about .persona-about-txt {
+    width: 100%;
+  }
+}
+
+.persona .persona-about .persona-about-txt h3 {
+  margin-bottom: 20px;
+}
+
+.persona .persona-about .persona-about-txt h4 {
+  margin-bottom: 15px;
+}
+
+.persona .persona-section {
+  margin-top: 20px;
+  width: 48%;
+}
+
+@media (max-width: 1000px) {
+  .persona .persona-section {
+    width: 100%;
+  }
+}
+
+.persona .persona-section :first-child {
+  margin-bottom: 15px;
+}
+
+.persona-boho-1 {
+  background-image: url("../static/assets/images/1/persona1.jpg");
+}
+
+.persona-boho-2 {
+  background-image: url("../static/assets/images/1/persona2.jpg");
 }
 /*# sourceMappingURL=style.css.map */
