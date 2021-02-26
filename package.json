@@ -36,4 +36,5 @@
             "staticPath": "./src/static/assets",
             "staticOutDir": "static"
         }}
+        
 }
