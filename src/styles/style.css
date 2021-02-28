@@ -114,14 +114,14 @@ ul.menu a {
   }
 }
 
-.link-toproject {
+.link-toproject, .project-wrapper article li {
   color: #0f6565;
   font: 300 18px "Quicksand", sans-serif;
   line-height: 1.5em;
 }
 
 @media (max-width: 550px) {
-  .link-toproject {
+  .link-toproject, .project-wrapper article li {
     font: 300 16px "Quicksand", sans-serif;
   }
 }
@@ -1716,11 +1716,25 @@ section.education {
   margin-top: 60px;
   margin-bottom: 120px;
   width: 100%;
+  height: 100%;
 }
 
 .project-wrapper article .article-description {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+.project-wrapper article ul {
+  list-style-position: outside;
+  margin-bottom: 30px;
+}
+
+.project-wrapper article li {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 1.2;
+  list-style: circle;
 }
 
 .whathowwhenwhy {
@@ -1770,6 +1784,14 @@ section.education {
   .what-container {
     width: 100%;
   }
+}
+
+.process {
+  max-width: 600px;
+}
+
+.challenges {
+  max-width: 600px;
 }
 
 .personas {
@@ -1836,7 +1858,8 @@ section.education {
           align-items: center;
 }
 
-.persona .persona-about h3, .persona .persona-about h4 {
+.persona .persona-about h3,
+.persona .persona-about h4 {
   text-align: center;
 }
 
@@ -1881,7 +1904,97 @@ section.education {
   background-repeat: no-repeat;
   background-position: top;
   width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 1000px) {
+  .user-journey {
+    height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .user-journey {
+    height: 275px;
+  }
+}
+
+.structure {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 600px;
+  margin-top: 30px;
+}
+
+.low-fidelity {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 480px;
+}
+
+@media (max-width: 1000px) {
+  .low-fidelity {
+    height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .low-fidelity {
+    height: 300px;
+  }
+}
+
+.style-guide {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
   height: 650px;
+}
+
+@media (max-width: 1000px) {
+  .style-guide {
+    height: 500px;
+  }
+}
+
+@media (max-width: 550px) {
+  .style-guide {
+    height: 400px;
+  }
+}
+
+.usability-test p {
+  line-height: 1.2;
+}
+
+.usability-test .usability {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 2000px;
+  margin-top: 100px;
+}
+
+@media (max-width: 1000px) {
+  .usability-test .usability {
+    height: 1200px;
+  }
+}
+
+@media (max-width: 550px) {
+  .usability-test .usability {
+    height: 700px;
+  }
+}
+
+.footer-boho {
+  margin-top: 0px;
 }
 
 .persona-boho-1 {
@@ -1892,7 +2005,23 @@ section.education {
   background-image: url("../static/assets/images/1/persona2.jpg");
 }
 
-.user-journey-1 {
+.user-journey-boho-1 {
   background-image: url("../static/assets/images/1/User-journey.png");
+}
+
+.structure-boho-1 {
+  background-image: url("../static/assets/images/1/structure.png");
+}
+
+.low-fidelity-boho-1 {
+  background-image: url("../static/assets/images/1/low-fidelity-1.png");
+}
+
+.style-guide-boho-1 {
+  background-image: url("../static/assets/images/1/style-guide.png");
+}
+
+.usability-boho-1 {
+  background-image: url("../static/assets/images/1/usability.png");
 }
 /*# sourceMappingURL=style.css.map */

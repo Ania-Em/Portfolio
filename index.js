@@ -95,7 +95,7 @@ if (document.querySelector(`.projectOthers1 .dot1`)){
     
     //Photos
     
-    const projectGalleryOthers3= new ImagesSlidesOthers(8,3);
+    const projectGalleryOthers3= new ImagesSlidesOthers(9,3);
     
     projectGalleryOthers3.arrowNext.addEventListener("click", function () {
       if (projectGalleryOthers3.firstNumber === projectGalleryOthers3.numberOfSlides){
