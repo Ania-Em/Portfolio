@@ -35,7 +35,7 @@ if (document.querySelector(`.projectOthers1 .dot1`)){
       }
     }
     
-    const projectGalleryOthers1= new ImagesSlidesOthers(13,1);
+    const projectGalleryOthers1= new ImagesSlidesOthers(12,1);
     
     projectGalleryOthers1.arrowNext.addEventListener("click", function () {
       if (projectGalleryOthers1.firstNumber === projectGalleryOthers1.numberOfSlides){

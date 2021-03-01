@@ -532,6 +532,8 @@ section.landing .email {
   }
 }
 
+
+
 .welcome-box .hello {
   font: 400 50px "Caveat", cursive;
   margin-bottom: 40px;
@@ -1189,73 +1191,6 @@ section.projects-others .project-image {
   }
 }
 
-/* About - Career path */
-
-section.education {
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.path {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  margin-top: $margin-phone;
-  margin-right: 50px;
-  margin-left: 50px;
-
-  @media (max-width: $media-query1) {
-    width: 70vw;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
-.txt-container-path h3 {
-  text-align: center;
-  text-shadow: $text-shadow;
-  margin-bottom: 30px;
-}
-
-.project-description-path {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.path .roles {
-  display: flex;
-  justify-content: center;
-}
-
-.path-image {
-  width: 100%;
-  height: 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 30px;
-}
-
-.path-image.ux {
-  background-image: url("../static/assets/images/About/1.png");
-}
-
-.path-image.e-commerce {
-  background-image: url("../static/assets/images/About/2.png");
-}
-
-.path-image.web-development {
-  background-image: url("../static/assets/images/About/3.png");
-}
-
-.path-image.architecture {
-  background-image: url("../static/assets/images/About/4.png");
-}
-
 //Pages- BOHO
 
 .background-landing {
@@ -1269,9 +1204,6 @@ section.education {
   top: 0;
 }
 
-.boho-landing {
-  background-image: url("../static/assets/images/1/2.png");
-}
 
 .project-wrapper {
   max-width: 1200px;
@@ -1300,14 +1232,25 @@ section.education {
     width: 100%;
     height: 100%;
 
+    @media (max-width: $media-query1) {
+      margin-top: 45px;
+      margin-bottom: 75px;
+    }
+    @media (max-width: $media-query2) {
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+
     .article-description {
       max-width: 600px;
       margin: 0 auto;
     }
+
     ul {
       list-style-position: outside;
       margin-bottom:30px;
     }
+
     li {
       max-width: 600px;
       margin: 0 auto;
@@ -1522,6 +1465,11 @@ section.education {
 
 
 //Boho
+
+.boho-landing {
+  background-image: url("../static/assets/images/1/2.png");
+}
+
 .persona-boho-1 {
   background-image: url("../static/assets/images/1/persona1.jpg");
 }
@@ -1548,4 +1496,67 @@ section.education {
 
 .usability-boho-1 {
   background-image: url("../static/assets/images/1/usability.png");
+}
+
+//Dentico
+
+.footer-dentico{
+  margin-top:0px;
+}
+
+.dentico-landing {
+  background-image: url("../static/assets/images/2/2.jpg");
+}
+
+.persona-dentico-1 {
+  background-image: url("../static/assets/images/2/persona1.jpg");
+}
+
+.persona-dentico-2 {
+  background-image: url("../static/assets/images/2/persona2.jpg");
+}
+
+.user-journey-dentico-1 {
+  background-image: url("../static/assets/images/2/User-journey.png");
+}
+
+.structure-dentico-1 {
+  background-image: url("../static/assets/images/2/structure.png");
+}
+
+.low-fidelity-dentico-1 {
+  background-image: url("../static/assets/images/2/low-fidelity-1.png");
+  height: 450px;
+
+  @media (max-width: $media-query1) {
+    height: 325px;
+  }
+  @media (max-width: $media-query2) {
+    height: 250px;
+  }
+}
+
+.style-guide-dentico-1 {
+  background-image: url("../static/assets/images/2/style-guide.png");
+  height: 550px;
+
+  @media (max-width: $media-query1) {
+    height: 400px;
+  }
+  @media (max-width: $media-query2) {
+    height: 300px;
+  }
+}
+
+.usability-test .usability-dentico-1 {
+  background-image: url("../static/assets/images/2/usability.png");
+  height: 575px;
+
+  @media (max-width: $media-query1) {
+    height: 400px;
+  }
+  @media (max-width: $media-query2) {
+    margin-top:30px;
+    height: 275px;
+  }
 }
