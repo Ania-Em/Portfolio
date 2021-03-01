@@ -19,6 +19,26 @@ images.forEach(image => {
     observer.observe(image)
 })
 
+//Anim 2
+
+const images2 = document.querySelectorAll('.anim2');
+
+observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        if(entry.intersectionRatio > 0) {
+            entry.target.style.animation = `anim2 700ms ${entry.target.dataset.delay} forwards ease-out`;
+        }
+        else {
+            entry.target.style.animation = 'none';
+        }
+    })
+
+})
+
+images2.forEach(image => {
+    observer.observe(image)
+})
 //Project gallery
 
 if (document.querySelector(`.projectOthers1 .dot1`)){

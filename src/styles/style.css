@@ -574,6 +574,66 @@ footer .thanks .favourite {
   overflow: hidden;
 }
 
+.anim {
+  opacity: 0;
+}
+
+.anim2 {
+  opacity: 0;
+}
+
+@-webkit-keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim2 {
+  from {
+    -webkit-transform: translatex(-100px);
+            transform: translatex(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    -webkit-transform: translatex(-100px);
+            transform: translatex(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+    opacity: 1;
+  }
+}
+
 /* Landing - main page - email */
 section.landing .email {
   -webkit-writing-mode: vertical-lr;
@@ -671,36 +731,6 @@ section.landing .email {
   }
 }
 
-.anim {
-  opacity: 0;
-}
-
-@-webkit-keyframes anim1 {
-  from {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes anim1 {
-  from {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .welcome-box .hello {
   font: 400 50px "Caveat", cursive;
   margin-bottom: 40px;
@@ -727,7 +757,6 @@ section.landing .email {
 .aboutme > p {
   white-space: nowrap;
   overflow: hidden;
-  text-align: center;
 }
 
 .aboutme p:nth-child(1) {
@@ -799,25 +828,25 @@ section.landing .email {
 @-webkit-keyframes blink-caret {
   from,
   to {
-    border-color: transparent;
+    border-right: 0.3em solid transparent;
   }
   50% {
     border-right: 0.3em solid #0f6565;
   }
   100% {
-    border: none;
+    border-right: 0.3em solid transparent;
   }
 }
 @keyframes blink-caret {
   from,
   to {
-    border-color: transparent;
+    border-right: 0.3em solid transparent;
   }
   50% {
     border-right: 0.3em solid #0f6565;
   }
   100% {
-    border: none;
+    border-right: 0.3em solid transparent;
   }
 }
 
@@ -1580,6 +1609,88 @@ section.projects-others .project-image {
   .profile-description p:last-child {
     text-align: center;
   }
+}
+
+/* About - Career path */
+section.education {
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.path {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  margin-top: 70px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .path {
+    width: 70vw;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.txt-container-path h3 {
+  text-align: center;
+  text-shadow: 3px 3px 0px #c1e8db;
+  margin-bottom: 30px;
+}
+
+.project-description-path {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.path .roles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.path-image {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.path-image.ux {
+  background-image: url("../static/assets/images/About/1.png");
+}
+
+.path-image.e-commerce {
+  background-image: url("../static/assets/images/About/2.png");
+}
+
+.path-image.web-development {
+  background-image: url("../static/assets/images/About/3.png");
+}
+
+.path-image.architecture {
+  background-image: url("../static/assets/images/About/4.png");
 }
 
 .background-landing {
