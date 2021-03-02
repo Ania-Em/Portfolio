@@ -1318,8 +1318,7 @@ section.projects-others .image-container {
 
 @media (max-width: 1000px) {
   section.projects-others .image-container {
-    margin-right: 0;
-    width: 100%;
+    width: 90vw;
   }
 }
 
@@ -1396,11 +1395,7 @@ section.projects-others .project-image {
 
 @media (max-width: 1000px) {
   .arrow-wrapper {
-    height: 40px;
-    margin-right: 0;
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 20px;
   }
 }
 
@@ -1460,12 +1455,13 @@ section.projects-others .project-image {
 
 @media (max-width: 550px) {
   .profilephoto-container {
-    padding: 30px;
+    padding: 50px;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 30px;
   }
 }
 
@@ -1967,6 +1963,18 @@ section.education {
   margin-top: 30px;
 }
 
+@media (max-width: 1000px) {
+  .structure {
+    height: 450px;
+  }
+}
+
+@media (max-width: 550px) {
+  .structure {
+    height: 300px;
+  }
+}
+
 .low-fidelity {
   background-size: contain;
   background-repeat: no-repeat;
@@ -1983,7 +1991,7 @@ section.education {
 
 @media (max-width: 550px) {
   .low-fidelity {
-    height: 300px;
+    height: 275px;
   }
 }
 
