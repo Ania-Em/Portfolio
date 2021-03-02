@@ -1522,6 +1522,7 @@ section.projects-others .project-image {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 80px;
   }
 }
 
@@ -1631,7 +1632,7 @@ section.education {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 40%;
-  margin-top: 70px;
+  margin-top: calc($margin-phone - 20px);
   margin-right: 50px;
   margin-left: 50px;
 }
