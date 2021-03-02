@@ -6,11 +6,13 @@ Autorka: Anna Marszałek
 
 -   HTML
 -   CSS
+-   JavaScript
 
 ### Dodatkowe narzędzia:
 
 -   Icono
 -   Google Fonts
+-   Google analytics
 
 ## Opis projektu:
 
@@ -40,5 +42,6 @@ Wykonany samodzielnie przy użyciu dotychczas poznanej technologii, bez użycia 
 -   Flexbox i/lub CSS Grid
 -   Position (absolute, relative)
 -   Animacje keyframes
--   Formularz (bez funkcji wysłania formularza)
 -   Responsive Web Design
+-   Galeria obrazów - Javascript
+-   Animacja ładowania zawartości strony przy scrollowaniu- Javascript
