@@ -391,7 +391,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 240px;
+  margin-top: 180px;
   padding-bottom: 30px;
 }
 
@@ -1271,7 +1271,7 @@ article.project3::after {
 }
 
 article.project1 {
-  margin-top: 240px;
+  margin-top: 180px;
 }
 
 @media (max-width: 1000px) {
