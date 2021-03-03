@@ -1996,6 +1996,92 @@ section.education {
   }
 }
 
+.High-fidelity1 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 1500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1000px) {
+  .High-fidelity1 {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 550px) {
+  .High-fidelity1 {
+    height: 700px;
+  }
+}
+
+.High-fidelity2 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 950px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .High-fidelity2 {
+    height: 650px;
+  }
+}
+
+@media (max-width: 550px) {
+  .High-fidelity2 {
+    height: 450px;
+  }
+}
+
+.High-fidelity3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 1850px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1000px) {
+  .High-fidelity3 {
+    height: 1200px;
+  }
+}
+
+@media (max-width: 550px) {
+  .High-fidelity3 {
+    height: 700px;
+  }
+}
+
+.High-fidelity4 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 1450px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1000px) {
+  .High-fidelity4 {
+    height: 950px;
+  }
+}
+
+@media (max-width: 550px) {
+  .High-fidelity4 {
+    height: 600px;
+  }
+}
+
 .style-guide {
   background-size: contain;
   background-repeat: no-repeat;
@@ -2062,11 +2148,32 @@ section.education {
 }
 
 .structure-boho-1 {
-  background-image: url("../static/assets/images/1/structure.png");
+  background-image: url("../static/assets/images/1/structure1.png");
 }
 
 .low-fidelity-boho-1 {
   background-image: url("../static/assets/images/1/low-fidelity-1.png");
+}
+
+.High-fidelity-boho-1 {
+  background-image: url("../static/assets/images/1/high-fidelity1.jpg");
+}
+
+.High-fidelity-boho-2 {
+  background-image: url("../static/assets/images/1/high-fidelity2.jpg");
+  margin-bottom: 30px;
+}
+
+.High-fidelity-boho-3 {
+  background-image: url("../static/assets/images/1/high-fidelity3.png");
+}
+
+.High-fidelity-boho-4 {
+  background-image: url("../static/assets/images/1/high-fidelity4.jpg");
+}
+
+.High-fidelity-boho-5 {
+  background-image: url("../static/assets/images/1/high-fidelity5.jpg");
 }
 
 .style-guide-boho-1 {
