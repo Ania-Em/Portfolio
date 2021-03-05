@@ -344,6 +344,7 @@ footer {
   @media (max-width: $media-query2) {
     margin-top: $margin-phone;
     width: 100%;
+    padding-bottom: 0px;
   }
 }
 
@@ -1220,7 +1221,7 @@ section.education {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-top: calc($margin-phone - 20px);
+  margin-top: $margin-phone;
   margin-right: 50px;
   margin-left: 50px;
 
@@ -1229,17 +1230,29 @@ section.education {
     margin-left: 0px;
     margin-right: 0px;
   }
+
+  @media (max-width: $media-query2){
+    margin-top: 20px;
+  }
 }
 
 .txt-container-path h3 {
   text-align: center;
   text-shadow: $text-shadow;
   margin-bottom: 30px;
+
+  @media (max-width: $media-query2){
+    margin-bottom: 20px;
+  }
 }
 
 .project-description-path {
   text-align: center;
   margin-bottom: 30px;
+
+  @media (max-width: $media-query2){
+    margin-bottom: 20px;
+  }
 }
 
 .path .roles {
@@ -1254,6 +1267,9 @@ section.education {
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 30px;
+  @media (max-width: $media-query2){
+    margin-bottom: 10px;
+  }
 }
 
 .path-image.ux {
